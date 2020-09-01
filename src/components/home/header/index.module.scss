@@ -1,0 +1,94 @@
+
+.header {
+	position: relative;
+
+	width: 100vw;
+	height: 95vh;
+
+	&.video-playing {
+		.intro .heading span {
+			animation-name: span-fade-in;
+		}
+
+		.intro .description {
+			animation-name: desc-fade-in;
+		}
+	}
+
+	.video {
+		position: relative;
+		width: 100% !important;
+		height: 100%;
+
+		object-fit: cover;
+		object-position: bottom center;
+	}
+
+	.intro {
+		$baseDelay: 2150ms;
+		$letterDelay: 120ms;
+		$lettersCount: 9;
+
+		position: absolute;
+		top: 40%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+
+		.heading {
+			margin-bottom: 1rem;
+
+			font-size: 5rem !important;
+			font-weight: 900;
+
+			text-shadow:
+				0 1px 2px rgba(0, 0, 0, 0.37),
+				0 0.25rem 2.5rem rgba(0, 0, 0, 0.1);
+
+			span {
+				display: inline-block;
+
+				opacity: 0;
+				transform: translateX(-1rem);
+
+				animation-fill-mode: forwards;
+				animation-duration: 400ms;
+				animation-timing-function: ease-out;
+
+				@for $i from 1 through 20 {
+					&:nth-child(#{$i}) {
+						animation-delay: #{2150 + $i * 120}ms;
+					}
+				}
+
+				@keyframes span-fade-in {
+					to {
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+
+		.description {
+			line-height: 1.25;
+			font-weight: 500;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+
+			opacity: 0;
+			transform: translateY(1rem);
+
+			animation-fill-mode: forwards;
+			animation-duration: 750ms;
+			animation-timing-function: ease-out;
+			animation-delay: $baseDelay + ($letterDelay * $lettersCount) + 1000ms;
+
+			@keyframes desc-fade-in {
+				to {
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+	}
+}
