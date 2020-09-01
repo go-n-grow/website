@@ -1,0 +1,8 @@
+@import "src/styling/variables";
+
+
+.tile {
+	border-radius: $border-radius-default;
+
+	background: rgba(0, 0, 0, 0.1);
+}
