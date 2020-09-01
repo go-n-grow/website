@@ -1,0 +1,56 @@
+// animations
+$easing-default: 200ms ease-in-out;
+
+// shadows
+$shadow-default: 0 0.2rem 1.75rem rgba(0, 0, 0, 0.4), 0 2px 0.1rem rgba(0, 0, 0, 0.1);
+
+// borders
+$border-radius-default: 1rem;
+
+$title-weight: 900;
+$title-strong-weight: 900;
+
+// colors
+$primary: #1F54BB;
+$dark: #293469;
+$text-strong: #293469;
+
+// text
+$family-primary: "Alegreya";
+$family-sans-serif: "Alegreya";
+$family-secondary: $family-sans-serif;
+
+$text: #8C99B1;
+
+$title-color: $text;
+$title-family: $family-primary;
+$title-weight: 700;
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+// subtitle
+$subtitle-color: transparentize($text, 0.5);
+$subtitle-color-light: #bdcae2;
+$subtitle-family: $family-sans-serif;
+$subtitle-weight: 700;
+
+.subtitle {
+	letter-spacing: 0.15rem;
+}
+
+// navbar
+$navbar-background-color: $primary;
+
+// body
+$body-background-color: #D69D7F;
+$body-family: $family-secondary;
+
+
+
+// bulma
+@import '~bulma/sass/utilities/all';
+
+// helper
+@import "helper";

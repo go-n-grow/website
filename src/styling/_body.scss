@@ -1,0 +1,17 @@
+@import "variables";
+
+
+::selection,
+::-moz-selection {
+	color: $white;
+	background: lighten($primary, 10%);
+}
+
+* {
+	hyphens: auto;
+}
+
+html,
+body {
+	font-size: 20px;
+}
