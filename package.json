@@ -22,7 +22,7 @@
     "react-bulma-components": "^3.4.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "reusable-components": "Coderwelsch/reusable-components"
+    "reusable-components": "/Users/coderwelsch/Documents/Work/02 Development/Github/reusable-components/"
   },
   "devDependencies": {
     "prettier": "2.1.0"
