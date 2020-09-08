@@ -1,6 +1,3 @@
-const WebMConverter = require("");
-
-
 module.exports = {
 	siteMetadata: {
 		siteUrl: `https://www.go-n-grow.org`,
