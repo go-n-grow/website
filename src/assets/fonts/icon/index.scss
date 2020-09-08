@@ -1,0 +1,27 @@
+@font-face {
+	font-family: "icon";
+	src: url("#{ $icon-font-base-path }/icon.eot?bcfe7a2c52e1583cdd9e0c67b0a66de4?#iefix") format("embedded-opentype"),
+url("#{ $icon-font-base-path }/icon.woff2?bcfe7a2c52e1583cdd9e0c67b0a66de4") format("woff2"),
+url("#{ $icon-font-base-path }/icon.woff?bcfe7a2c52e1583cdd9e0c67b0a66de4") format("woff");
+}
+
+*[class*="icon-"] {
+	line-height: 1;
+
+	&:before {
+		font-family: icon !important;
+		font-style: normal;
+		font-weight: normal !important;
+		vertical-align: top;
+	}
+}
+
+.icon-explanation:before {
+	content: "\f101";
+}
+.icon-location:before {
+	content: "\f102";
+}
+.icon-logo:before {
+	content: "\f103";
+}
