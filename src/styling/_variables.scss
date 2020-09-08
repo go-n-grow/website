@@ -1,3 +1,6 @@
+// paths
+$icon-font-base-path: "../assets/fonts/icon";
+
 // animations
 $easing-default: 200ms ease-in-out;
 
@@ -15,12 +18,12 @@ $primary: #1F54BB;
 $dark: #293469;
 $text-strong: #293469;
 
-// text
+// font
 $family-primary: "Alegreya";
 $family-sans-serif: "Alegreya";
 $family-secondary: $family-sans-serif;
 
-$text: #8C99B1;
+$text: #F3F0EE;
 
 $title-color: $text;
 $title-family: $family-primary;
