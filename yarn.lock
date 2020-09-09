@@ -12956,8 +12956,9 @@ retry@^0.12.0:
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.12.0.tgz#1b42a6266a21f07421d1b0b54b7dc167b01c013b"
   integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
 
-"reusable-components@file:../../Github/reusable-components":
+reusable-components@Coderwelsch/reusable-components:
   version "0.1.0"
+  resolved "https://codeload.github.com/Coderwelsch/reusable-components/tar.gz/d24d748ca4d6f0eb4488f19c6d9b61539d7e4792"
   dependencies:
     bulma "^0.8.2"
     react-bulma-components "^3.2.0"
