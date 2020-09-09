@@ -1,0 +1,33 @@
+@import "src/styling/variables";
+
+
+.header {
+	margin-bottom: 3rem;
+
+	.icon {
+		font-size: 5rem;
+		color: $text;
+	}
+}
+
+.tile {
+	display: flex;
+	justify-content: center; // left and right
+	align-items: flex-start; // top and bottom
+
+	padding: 3rem;
+	margin-top: 3rem !important;
+
+	border-radius: $border-radius-default;
+
+	background: rgba(0, 0, 0, 0.1);
+
+	.icon {
+		// margin-top: -2rem;
+	}
+
+	.content {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
+}
