@@ -1,0 +1,39 @@
+# This file is a template, and might need editing before it works on your project.
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:lts
+
+stages:
+  - build
+  - production_deploy
+  - dev_deploy
+
+before_script:
+  - apt-get update -qq
+  - apt-get install -y lftp sshpass ffmpeg
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  artifacts:
+    paths:
+      - public/
+  script:
+    - ./ci/build.sh
+
+production_deploy:
+  stage: production_deploy
+  only:
+    - deploy
+  script:
+    - ./ci/deploy-prod.sh
+
+dev_deploy:
+  stage: dev_deploy
+  only:
+    - master
+  script:
+    - ./ci/deploy-dev.sh

@@ -1,0 +1,2 @@
+#!/bin/sh
+lftp -e "set ssl:verify-certificate false; set ftp:ssl-allow no; open '$FTP_PROD_DOMAIN'; user '$FTP_PROD_USER_NAME' '$FTP_PROD_USER_PASS'; mirror -X .* -X .*/ --reverse --verbose --delete public/ $FTP_PROD_REMOTE_DIR; bye"
