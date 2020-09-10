@@ -37,9 +37,11 @@
 
 		transform: translate(-50%, -50%);
 
-		.heading span,
+		.heading span {
+			text-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+		}
 		.description span {
-			background: rgba(#7DBFD7, 0.6);
+			text-shadow: 0 0.05rem 1rem rgba(0, 0, 0, 0.5);
 		}
 
 		.heading {

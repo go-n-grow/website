@@ -1,7 +1,8 @@
 import React from "react";
 
-const Asset = ({ icon }) =>
+const Asset = ({ className, icon }) =>
 	<img
+		className={ className }
 		src={ `assets/illustrations/${ icon }.svg` }
 		alt=""
 	/>;

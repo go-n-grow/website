@@ -1,5 +1,6 @@
 import { graphql, StaticQuery } from "gatsby";
 import React, { useState } from "react";
+
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
 import { cn } from "reusable-components/helper";
@@ -40,10 +41,14 @@ const Header = ({ file }) => {
 			isVideoPlaying && Styles.videoPlaying
 		) }>
 			<video
-				onPlay={ () => setPlayState(true) }
+				onPlay={ () => {
+					console.log("PLAY");
+					setPlayState(true);
+				} }
 				className={ Styles.video }
 				autoPlay
 				loop
+				playsInline
 				muted>
 
 				{ Object.keys(file).map(key =>
