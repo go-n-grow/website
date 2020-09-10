@@ -1,5 +1,9 @@
 # stuff
 src/assets/fonts/icon/*.html
+src/assets/images
+.tsgrc
+.graphqlconfig
+tsg-project.graphql
 
 # ide
 .idea

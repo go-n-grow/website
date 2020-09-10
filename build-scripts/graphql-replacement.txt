@@ -1,0 +1,5 @@
+type Root {
+    takeshape: [Takeshape]
+}
+
+type Takeshape {

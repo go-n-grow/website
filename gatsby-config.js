@@ -1,3 +1,9 @@
+// load env vars
+require("dotenv").config({
+	path: `.env.${ process.env.NODE_ENV }`
+});
+
+
 module.exports = {
 	siteMetadata: {
 		siteUrl: `https://www.go-n-grow.org`,
@@ -13,6 +19,25 @@ module.exports = {
 			options: {
 				name: `files`,
 				path: `${ __dirname }/src/`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-zopfli`,
+			options: {
+				extensions: ["css", "html", "js", "svg"],
+			},
+		},
+		{
+			resolve: "gatsby-source-graphql",
+			options: {
+				typeName: "TS",
+				fieldName: "takeshape",
+				url: `https://api.takeshape.io/project/${ process.env.GATSBY_TAKESHAPE_PROJECT }/graphql`,
+				headers: {
+					"Content-Type": "application/json",
+					"Authorization": `Bearer ${ process.env.GATSBY_TAKESHAPE_TOKEN }`,
+				},
+				fetchOptions: {},
 			},
 		},
 		`gatsby-transformer-video`,
