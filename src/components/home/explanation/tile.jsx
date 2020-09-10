@@ -5,7 +5,7 @@ import Content from "react-bulma-components/lib/components/content/content";
 import Heading from "react-bulma-components/lib/components/heading/heading";
 
 import Asset from "../../ui/atom/asset";
-import Styles from "./index.module.scss";
+import Styles from "./tile.module.scss";
 
 
 const Tile = ({ title, icon, children }) =>

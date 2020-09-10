@@ -1,0 +1,23 @@
+@import "src/styling/variables";
+
+
+.header {
+	margin-bottom: 3rem;
+
+	.icon-wrapper {
+		margin-bottom: 1rem !important;
+
+		.icon {
+			font-size: 7rem;
+			color: $text;
+		}
+	}
+
+
+	.description {
+		max-width: 24rem;
+		margin: 0 auto;
+
+		text-align: center;
+	}
+}

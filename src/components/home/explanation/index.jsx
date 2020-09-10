@@ -1,39 +1,16 @@
 import React from "react";
 
-import Heading from "react-bulma-components/lib/components/heading/heading";
 import ButtonGroup from "react-bulma-components/lib/components/button/components/button-group";
 import Button from "react-bulma-components/lib/components/button/button";
 
-import Section from "../../layout/section";
-import Icon from "../../ui/atom/icon";
+import SimpleSection from "../../layout/section/simple";
 import Tile from "./tile";
-
-import Styles from "./index.module.scss";
 
 
 export default () =>
-	<Section>
-		<div className={ Styles.header }>
-			<Heading
-				renderAs={ "p" }
-				marginless
-				textAlignment={ "centered" }>
-
-				<Icon
-					icon={ "explanation" }
-					className={ Styles.icon }
-				/>
-
-			</Heading>
-
-			<Heading
-				renderAs={ "h2" }
-				textSize={ 1 }
-				textAlignment={ "centered" }
-				textColor={ "white" }>
-				Kurz erklärt
-			</Heading>
-		</div>
+	<SimpleSection
+		icon={ "explanation" }
+		title={ "Kurz erklärt" }>
 
 		<Tile
 			title={ "Wir sind …" }
@@ -82,5 +59,6 @@ export default () =>
 			</p>
 
 		</Tile>
-	</Section>;
+
+	</SimpleSection>;
 

@@ -1,33 +1,15 @@
 import React from "react";
 
-import Heading from "react-bulma-components/lib/components/heading/heading";
-
-import Section from "../../layout/section";
-import Icon from "../../ui/atom/icon";
-import Styles from "./index.module.scss";
+import SimpleSection from "../../layout/section/simple";
+import LocationMap from "../../ui/organism/location-map";
 
 
 export default () =>
-	<Section>
-		<div className={ Styles.header }>
-			<Heading
-				renderAs={ "p" }
-				marginless
-				textAlignment={ "centered" }>
+	<SimpleSection
+		icon={ "location" }
+		title={ "Die Geschäfte" }
+		description={ "Diese Geschäfte machen bei unserer Aktion mit. Stattet ihnen doch gerne mal einen Besuch ab ;-) …" }>
 
-				<Icon
-					icon={ "location" }
-					className={ Styles.icon }
-				/>
+		<LocationMap />
 
-			</Heading>
-
-			<Heading
-				renderAs={ "h2" }
-				textSize={ 1 }
-				textAlignment={ "centered" }
-				textColor={ "white" }>
-				Supporter
-			</Heading>
-		</div>
-	</Section>;
+	</SimpleSection>;

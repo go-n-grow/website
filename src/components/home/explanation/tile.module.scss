@@ -1,15 +1,6 @@
 @import "src/styling/variables";
 
 
-.header {
-	margin-bottom: 3rem;
-
-	.icon {
-		font-size: 5rem;
-		color: $text;
-	}
-}
-
 .tile {
 	display: flex;
 	justify-content: center; // left and right
