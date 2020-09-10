@@ -4,6 +4,9 @@ import SimpleSection from "../../layout/section/simple";
 import LocationMap from "../../ui/organism/location-map";
 
 
+
+
+
 export default () =>
 	<SimpleSection
 		icon={ "location" }

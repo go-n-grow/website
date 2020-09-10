@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
 import Columns from "react-bulma-components/lib/components/columns/columns";
@@ -9,25 +10,64 @@ import Styles from "./index.module.scss";
 
 
 
-const LocationMap = () =>
-	<Columns
-		centered
-		marginless
-		paddingless
-		className={ Styles.container }>
+const LocationMap = () => {
+	const data = useStaticQuery(graphql`
+		query {
+			takeshape {
+				getParticipantsList {
+					total
+					items {
+						qrIdCode
+						images {
+							image {
+								_id
+							}
+						}
+						flowerpotsCount
+						flowerpotState
+						contact {
+							eMail
+							phone
+							websiteUrl
+						}
+						company
+					}
+				}
+			}
+		}
+	`);
 
-		<Column
+	const participants = data.takeshape.getParticipantsList.items;
+
+	return (
+		<Columns
+			centered
+			marginless
 			paddingless
-			size={ 4 }>
-			<Sidebar />
-		</Column>
+			className={ Styles.container }>
+	
+			<Column
+				paddingless
+				size={ 4 }>
 
-		<Column
-			paddingless
-			size={ 8 }>
-			<Mapbox />
-		</Column>
+				<Sidebar
+					participants={ participants }
+				/>
 
-	</Columns>;
+			</Column>
+	
+			<Column
+				paddingless
+				size={ 8 }>
+
+				<Mapbox
+					participants={ participants }
+				/>
+
+			</Column>
+	
+		</Columns>
+	);
+};
 
 export default LocationMap;
