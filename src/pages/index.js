@@ -6,8 +6,8 @@ import Map from "../components/home/map/index.jsx";
 
 
 export default () =>
-	<div>
+	<>
 		<Header/>
 		<Explanation/>
 		<Map/>
-	</div>;
+	</>;

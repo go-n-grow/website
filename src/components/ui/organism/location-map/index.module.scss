@@ -1,4 +1,32 @@
+@import "src/styling/variables";
+
+
 .container {
+	max-height: 90vh;
 	padding: 0 !important;
+
+	overflow: hidden;
+
+	border-radius: $border-radius-default;
+
 	background: white;
+
+	box-shadow: $shadow-default;
+
+	.sidebarWrapper {
+		max-height: 90vh;
+
+		position: relative;
+		z-index: 1;
+
+		overflow: scroll;
+		overflow-scrolling: touch;
+
+		box-shadow: $shadow-small;
+	}
+
+	.mapWrapper {
+		position: relative;
+		z-index: 0;
+	}
 }

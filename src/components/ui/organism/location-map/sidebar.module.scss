@@ -1,0 +1,67 @@
+@import "src/styling/variables";
+
+
+.sidebar {
+	height: 100%;
+
+	padding: 1.5rem;
+
+	.entry {
+		margin-bottom: 1.5rem;
+		padding: 1rem;
+
+		display: flex;
+		justify-content: flex-start; // left and right
+		align-items: center; // top and bottom
+
+		cursor: pointer;
+
+		color: $grey-darker;
+
+		border-radius: $border-radius-small;
+
+		background: #F5F3F3;
+
+		transition:
+			box-shadow $easing-default,
+			background $easing-default;
+
+		&:hover {
+			background: #D7D7D7;
+			box-shadow: 0 2px 0.25rem rgba(0, 0, 0, 0.1);
+		}
+
+		&.active {
+			color: $light;
+			background: $primary;
+			box-shadow: 0 2px 0.25rem rgba(0, 0, 0, 0.1);
+		}
+
+		.icon {
+			margin-right: 0.75rem;
+
+			color: inherit;
+			font-size: 2.25rem;
+
+			transition: color $easing-default;
+		}
+
+		.info {
+			color: inherit;
+
+			.title {
+				color: inherit !important;
+
+				margin-bottom: 0;
+
+				transition: color $easing-default;
+			}
+
+			.address {
+				color: inherit;
+
+				transition: color $easing-default;
+			}
+		}
+	}
+}

@@ -6,17 +6,17 @@ import Column from "react-bulma-components/lib/components/columns/components/col
 import Container from "react-bulma-components/lib/components/container/container";
 import SectionComp from "react-bulma-components/lib/components/section/section";
 
-import Styles from "./index.module.scss";
+import Styles from "./simple.module.scss";
 
 
-const Section = ({ children, ...props }) =>
+const Section = ({ children, fullWidth, ...props }) =>
 	<SectionComp className={ Styles.section }>
 		<Container>
 			<Columns
 				centered
 				{ ...props }>
 
-				<Column size={ 10 }>
+				<Column size={ fullWidth ? 12 : 10 }>
 					{ children }
 				</Column>
 

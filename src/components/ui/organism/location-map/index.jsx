@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 
 import Columns from "react-bulma-components/lib/components/columns/columns";
 import Column from "react-bulma-components/lib/components/columns/components/column";
@@ -23,9 +23,14 @@ const LocationMap = () => {
 								_id
 							}
 						}
+						location {
+							latitude
+							longitude
+						}
 						flowerpotsCount
 						flowerpotState
 						contact {
+							address
 							eMail
 							phone
 							websiteUrl
@@ -37,7 +42,19 @@ const LocationMap = () => {
 		}
 	`);
 
-	const participants = data.takeshape.getParticipantsList.items;
+	let participants = []; // data.takeshape.getParticipantsList.items;
+
+	// mock data
+	for (let i = 0; i < 20; i++) {
+		participants = participants.concat(
+			data.takeshape.getParticipantsList.items
+		);
+	}
+
+	const [
+		selectedLocation,
+		selectLocation
+	] = useState(false);
 
 	return (
 		<Columns
@@ -48,9 +65,12 @@ const LocationMap = () => {
 	
 			<Column
 				paddingless
-				size={ 4 }>
+				size={ 4 }
+				className={ Styles.sidebarWrapper }>
 
 				<Sidebar
+					onSelectEntry={ selectLocation }
+					selectedLocation={ selectedLocation }
 					participants={ participants }
 				/>
 
@@ -58,9 +78,12 @@ const LocationMap = () => {
 	
 			<Column
 				paddingless
-				size={ 8 }>
+				size={ 8 }
+				className={ Styles.mapWrapper }>
 
 				<Mapbox
+					onSelectEntry={ selectLocation }
+					selectedLocation={ selectedLocation }
 					participants={ participants }
 				/>
 
