@@ -9,7 +9,6 @@ import Sidebar from "./sidebar";
 import Styles from "./index.module.scss";
 
 
-
 const LocationMap = () => {
 	const data = useStaticQuery(graphql`
 		query {

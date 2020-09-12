@@ -41,10 +41,7 @@ const Header = ({ file }) => {
 			isVideoPlaying && Styles.videoPlaying
 		) }>
 			<video
-				onPlay={ () => {
-					console.log("PLAY");
-					setPlayState(true);
-				} }
+				onPlay={ () => setPlayState(true) }
 				className={ Styles.video }
 				autoPlay
 				loop
