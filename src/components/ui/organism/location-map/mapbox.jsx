@@ -14,17 +14,17 @@ export default class Mapbox extends Component {
 	
 	static defaultProps = {};
 
-	static DEFAULT_ZOOM = 12;
+	static DEFAULT_ZOOM = 13;
 	static MAX_ZOOM = 20;
 	static MIN_ZOOM = 0; // 12;
-	static LOCATION_ZOOM = 18;
+	static LOCATION_ZOOM = 16;
 
 	static MapInstance;
 
 	state = {
-		lat: 0,
-		lng: 0,
-		zoom: 12
+		lat: 52.39180182552221,
+		lng: 13.056976136582989,
+		zoom: Mapbox.DEFAULT_ZOOM
 	};
 
 	mapContainer = React.createRef();
@@ -46,6 +46,7 @@ export default class Mapbox extends Component {
 	}
 
 	componentDidUpdate (prevProps, prevState, snapshot) {
+		// false means «not set yet»
 		const isLocationSelected = this.props.selectedLocation !== false;
 
 		const { location } = this.props.participants[
@@ -90,6 +91,10 @@ export default class Mapbox extends Component {
 
 		Mapbox.MapInstance.on("load", this.onMapReady.bind(this));
 	}
+	
+	onMove () {
+		console.log("MOVE", Mapbox.MapInstance.getCenter(), Mapbox.MapInstance.getZoom());
+	}
 
 	onMapReady () {
 		// load marker image
@@ -101,6 +106,9 @@ export default class Mapbox extends Component {
 				this.addMarker(String(i++), location);
 			}
 		});
+
+		// add further mapbox events
+		Mapbox.MapInstance.on("move", this.onMove.bind(this));
 	}
 
 	addMarker (markerId, { longitude, latitude }) {

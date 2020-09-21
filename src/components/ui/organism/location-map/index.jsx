@@ -41,14 +41,7 @@ const LocationMap = () => {
 		}
 	`);
 
-	let participants = []; // data.takeshape.getParticipantsList.items;
-
-	// mock data
-	for (let i = 0; i < 20; i++) {
-		participants = participants.concat(
-			data.takeshape.getParticipantsList.items
-		);
-	}
+	const participants = data.takeshape.getParticipantsList.items;
 
 	const [
 		selectedLocation,

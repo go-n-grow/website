@@ -21,6 +21,16 @@ $title-strong-weight: 900;
 $primary: #5EA047;
 $dark: #293469;
 $text-strong: #293469;
+$link: white;
+$link-hover: rgba($link, 0.8);
+
+a {
+	padding: 0 0.25rem;
+
+	border-radius: 0.25rem;
+
+	background: rgba(white, 0.1);
+}
 
 // font
 $family-primary: "Alegreya";

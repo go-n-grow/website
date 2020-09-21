@@ -7,7 +7,7 @@ import SimpleSection from "../../layout/section/simple";
 import Tile from "./tile";
 
 
-export default () =>
+const Explanation = () =>
 	<SimpleSection
 		icon={ "explanation" }
 		title={ "Kurz erklärt" }>
@@ -17,7 +17,7 @@ export default () =>
 			icon={ "hi" }>
 
 			<p>
-				… die Initiative <i>»Go ’n’ Grow«</i> der FH Potsdam.
+				… die Initiative <strong><i>» Go ’n’ Grow «</i></strong> der FH Potsdam.
 				Wir wollen mit eurer Hilfe Potsdam grüner und
 				insektenfreundlicher gestalten. Zusammen bringen wir Potsdam zum blühen!
 				Und das machen wir&nbsp;so:
@@ -29,7 +29,8 @@ export default () =>
 			title={ "Blumentöpfe as a Service" }>
 
 			<p>
-				Zusammen mit der Grünflächenverwaltung der Stadt Potsdam vergeben wir an die ersten 10 interessierten Geschäfte (wie Cafés, Bars, Buchläden, etc.) kostenlose Blumenkästen und -töpfe, die vor den Laden gestellt werden können. Größe und Material (Stein, Holz, Ton) können dabei frei gewählt werden. Die Verwaltung kümmert sich um die Anmeldung und die Aufstellung der Töpfe.
+				Zusammen mit der <a href={ "https://vv.potsdam.de/vv/oe/173010100000024481.php" } target={ "_blank" } rel={ "noopener noreferrer" }><strong>Grünflächenverwaltung
+				der Stadt Potsdam</strong></a> vergeben wir an die ersten 10 interessierten Geschäfte (wie Cafés, Bars, Buchläden, etc.) kostenlose Blumenkästen und -töpfe, die vor den Laden gestellt werden können. Größe und Material (Stein, Holz, Ton) können dabei frei gewählt werden. Die Verwaltung kümmert sich um die Anmeldung und die Aufstellung der Töpfe.
 			</p>
 
 			<ButtonGroup position={ "centered" }>
@@ -42,7 +43,7 @@ export default () =>
 			</p>
 
 			<p>
-				Natürlich könnt Ihr eure Blumensamen natürlich auch gerne in eurem Garten, im kargen Vorhof, auf eurem Balkon, oder überall anders einpflanzen. Die Blumen erfreuen sich über jede Pflege – meist in Form von Wasser 😛.
+				Natürlich könnt Ihr eure Blumensamen natürlich auch gerne in eurem Garten, im kargen Vorhof, auf eurem Balkon, oder überall anders einpflanzen. Die Blumen erfreuen sich über jede Pflege – meist in Form von Wasser <span role={ "img" } aria-label={ "Smiley mit herausgestreckter Zunge" }>😛</span>.
 			</p>
 		</Tile>
 
@@ -62,3 +63,4 @@ export default () =>
 
 	</SimpleSection>;
 
+export default Explanation;

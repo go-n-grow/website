@@ -24,6 +24,9 @@ export default class Sidebar extends Component {
          flowerpotState,
          contact
      }, index) {
+		const triggerEvent = index === this.props.selectedLocation ?
+			undefined : () => this.props.onSelectEntry(index)
+
 		return (
 			<li
 				key={ `${ company }-${ index }` }
@@ -31,11 +34,8 @@ export default class Sidebar extends Component {
 					Styles.entry,
 					this.props.selectedLocation === index && Styles.active
 				) }
-				onClick={
-					index === this.props.selectedLocation ?
-						undefined :
-						() => this.props.onSelectEntry(index)
-				}>
+				onKeyDown={ triggerEvent }
+				onClick={ triggerEvent }>
 
 				<Icon
 					className={ Styles.icon }
