@@ -1,0 +1,55 @@
+@import "src/styling/variables";
+
+
+.containerWrapper {
+	display: flex;
+	justify-content: center; // left and right
+	align-items: center; // top and bottom
+	flex-direction: column;
+
+	background: #C28E73;
+
+	.container {
+		padding: 4rem 0 4rem 0;
+
+		text-align: center;
+
+		.icon {
+			font-size: 10rem;
+		}
+
+		.sublineWrapper {
+			margin-top: 1.5rem;
+			margin-bottom: 0.25rem;
+
+			display: flex;
+			justify-content: center; // left and right
+			align-items: center; // top and bottom
+
+			.subline {
+				border-radius: $border-radius-small;
+
+				padding: 0.2rem 0.5rem;
+
+				color: $text;
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.05rem;
+
+				background: #A47861;
+			}
+		}
+
+		.heading {
+			font-size: 3rem;
+		}
+
+		.description {
+			max-width: 25rem;
+			width: 100%;
+
+			margin: 0 auto;
+			margin-bottom: 2rem;
+		}
+	}
+}

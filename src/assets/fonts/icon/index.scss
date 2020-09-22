@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "icon";
-	src: url("#{ $icon-font-base-path }/icon.eot?bcfe7a2c52e1583cdd9e0c67b0a66de4?#iefix") format("embedded-opentype"),
-url("#{ $icon-font-base-path }/icon.woff2?bcfe7a2c52e1583cdd9e0c67b0a66de4") format("woff2"),
-url("#{ $icon-font-base-path }/icon.woff?bcfe7a2c52e1583cdd9e0c67b0a66de4") format("woff");
+	src: url("#{ $icon-font-base-path }/icon.eot?f2dd90c968273274b1873514894427f1?#iefix") format("embedded-opentype"),
+url("#{ $icon-font-base-path }/icon.woff2?f2dd90c968273274b1873514894427f1") format("woff2"),
+url("#{ $icon-font-base-path }/icon.woff?f2dd90c968273274b1873514894427f1") format("woff");
 }
 
 *[class*="icon-"] {
@@ -19,9 +19,15 @@ url("#{ $icon-font-base-path }/icon.woff?bcfe7a2c52e1583cdd9e0c67b0a66de4") form
 .icon-explanation:before {
 	content: "\f101";
 }
-.icon-location:before {
+.icon-fullscreen:before {
 	content: "\f102";
 }
-.icon-logo:before {
+.icon-location:before {
 	content: "\f103";
+}
+.icon-logo:before {
+	content: "\f104";
+}
+.icon-together:before {
+	content: "\f105";
 }

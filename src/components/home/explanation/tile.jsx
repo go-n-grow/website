@@ -24,7 +24,9 @@ const Tile = ({ title, icon, children }) =>
 			className={ Styles.content }
 			size={ 8 }>
 
-			<Heading>{ title }</Heading>
+			<Heading
+				dangerouslySetInnerHTML={ { __html: title } }
+			/>
 
 			<Content>
 				{ children }

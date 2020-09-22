@@ -6,6 +6,7 @@ import IconSrc from "./location.png";
 import Styles from "./mapbox.module.scss";
 
 
+
 export default class Mapbox extends Component {
 	static propTypes = {
 		participants: PropTypes.array.isRequired,
@@ -16,7 +17,7 @@ export default class Mapbox extends Component {
 
 	static DEFAULT_ZOOM = 13;
 	static MAX_ZOOM = 20;
-	static MIN_ZOOM = 0; // 12;
+	static MIN_ZOOM = 0;
 	static LOCATION_ZOOM = 16;
 
 	static MapInstance;

@@ -17,7 +17,11 @@ Icon.propTypes = {
 	icon: PropTypes.oneOf([
 		"logo",
 		"explanation",
-		"location"
+		"location",
+		"together",
+		"fullscreen",
+		"logo-lhp-full",
+		"logo-lhp-small"
 	]),
 	size: PropTypes.oneOf([1, 2, 3, 4, 5, 6])
 };

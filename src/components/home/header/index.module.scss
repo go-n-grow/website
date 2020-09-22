@@ -1,3 +1,5 @@
+@import "src/styling/variables";
+
 
 .header {
 	position: relative;
@@ -12,6 +14,10 @@
 
 		.intro .description {
 			animation-name: desc-fade-in;
+		}
+
+		.intro .locationContainer {
+			animation-name: location-fade-in;
 		}
 	}
 
@@ -37,9 +43,49 @@
 
 		transform: translate(-50%, -50%);
 
+		.locationContainer {
+			display: flex;
+			justify-content: center; // left and right
+			align-items: center; // top and bottom
+
+			opacity: 0;
+
+			animation-fill-mode: forwards;
+			animation-duration: 750ms;
+			animation-timing-function: ease-out;
+			animation-delay: $baseDelay + ($letterDelay * $lettersCount);
+
+			@keyframes location-fade-in {
+				to {
+					opacity: 1;
+				}
+			}
+
+			.location {
+				display: inline-flex;
+				justify-content: center; // left and right
+				align-items: center; // top and bottom
+
+				padding: 0.2rem 0.6rem;
+
+				border-radius: $radius-large;
+
+				text-align: center;
+
+				background: rgba(0, 0, 0, 0.45);
+
+				.icon {
+					margin-right: 0.25rem;
+					font-size: 1rem;
+				}
+			}
+		}
+
+
 		.heading span {
 			text-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
 		}
+
 		.description span {
 			text-shadow: 0 0.05rem 1rem rgba(0, 0, 0, 0.5);
 		}
