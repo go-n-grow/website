@@ -1,6 +1,10 @@
 [
 	{
-		"label": "",
-		"hrefTarget": ""
+		"label": "Kurz erklärt",
+		"hrefTarget": "kurz-erklaert"
+	},
+	{
+		"label": "Teilnehmende Geschäfte",
+		"hrefTarget": "geschaefte"
 	}
 ]

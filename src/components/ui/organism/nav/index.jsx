@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Nav from "reusable-components/ui/nav";
+import { ArrowRight } from "reusable-components/ui/buttons";
+import NavComp from "reusable-components/ui/nav";
+import Button from "react-bulma-components/lib/components/button/button";
 
-// import NavItems from "./nav-items.json";
+import NavItems from "./nav-items.json";
 
 
 export default class Nav extends Component {
@@ -11,9 +13,17 @@ export default class Nav extends Component {
 	
 	render () {
 		return (
-			<Nav NavItems={  }>
-
-			</Nav>
+			<NavComp
+				NavItems={ NavItems }
+				CTAButtonComp={ CTAButton }
+			/>
 		);
 	}
 }
+
+
+const CTAButton = () =>
+	<ArrowRight
+		color={ "primary" }>
+		Jetzt bewerben
+	</ArrowRight>;

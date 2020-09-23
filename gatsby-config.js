@@ -1,8 +1,10 @@
+const Path = require("path");
+
+
 // load env vars
 require("dotenv").config({
-	path: `.env.${ process.env.NODE_ENV }`
+	path: `.env.${ process.env.NODE_ENV }`,
 });
-
 
 module.exports = {
 	siteMetadata: {
@@ -60,4 +62,15 @@ module.exports = {
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
 	],
+};
+
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+	actions.setWebpackConfig({
+		resolve: {
+			alias: {
+				"reusable-components": Path.resolve(__dirname, "node_modules/reusable-components/dist/")
+			}
+		}
+	});
 };
