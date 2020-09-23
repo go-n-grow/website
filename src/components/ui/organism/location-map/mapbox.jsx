@@ -73,8 +73,8 @@ export default class Mapbox extends Component {
 	}
 
 	componentDidMount () {
-		console.log("TOKEN", process.env.MAPBOX_TOKEN);
-		console.log("TOKEN", process.env.MAPBOX_STYLE_URL);
+		console.log("TOKEN", process.env.GATSBY_MAPBOX_TOKEN);
+		console.log("TOKEN", process.env.GATSBY_MAPBOX_STYLE_URL);
 		console.log("MAPBOX MOUNTED");
 
 		this.initMapInstance();
@@ -83,7 +83,7 @@ export default class Mapbox extends Component {
 	initMapInstance () {
 		Mapbox.MapInstance = new MapboxComp.Map({
 			container: this.mapContainer.current,
-			style: process.env.MAPBOX_STYLE_URL,
+			style: process.env.GATSBY_MAPBOX_STYLE_URL,
 			center: [
 				this.state.lng,
 				this.state.lat
