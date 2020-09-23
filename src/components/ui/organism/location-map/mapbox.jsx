@@ -73,6 +73,8 @@ export default class Mapbox extends Component {
 	}
 
 	componentDidMount () {
+		console.log("TOKEN", process.env.MAPBOX_TOKEN);
+		console.log("TOKEN", process.env.MAPBOX_STYLE_URL);
 		console.log("MAPBOX MOUNTED");
 
 		this.initMapInstance();
