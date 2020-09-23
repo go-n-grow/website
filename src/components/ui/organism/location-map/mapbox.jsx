@@ -42,7 +42,7 @@ export default class Mapbox extends Component {
 			lng: Number.parseFloat(location.longitude),
 		};
 
-		MapboxComp.accessToken = process.env.MAPBOX_TOKEN;
+		MapboxComp.accessToken = process.env.GATSBY_MAPBOX_TOKEN;
 	}
 
 	componentDidUpdate (prevProps, prevState, snapshot) {
