@@ -9,7 +9,8 @@ import Why from "./section-why";
 const Explanation = () =>
 	<SimpleSection
 		icon={ "explanation" }
-		title={ "Kurz erklärt" }>
+		title={ "Kurz erklärt" }
+		id={ "kurz-erklaert" }>
 
 		<Intro />
 

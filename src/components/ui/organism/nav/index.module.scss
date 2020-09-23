@@ -1,6 +1,46 @@
 @import "src/styling/variables";
 
 
+.rootContainer {
+	background: rgba(0, 0, 0, 0.6);
+
+	.container {
+		.navItems {
+			background: transparent;
+
+			li {
+				padding: 0 !important;
+
+				&:last-of-type {
+					margin-right: 1.25rem !important;
+				}
+
+				&:hover,
+				&:active {
+					background: transparent !important;
+				}
+
+				a {
+					padding: 1.5rem 1.25rem !important;
+
+					display: inline-block;
+
+					color: white !important;
+
+					&:hover {
+						background: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+.logo {
+	margin-left: 1rem;
+	font-size: 1.75rem;
+}
+
 .ctaBtn {
 	padding: 0.25rem 0.9rem;
 

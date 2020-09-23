@@ -21,7 +21,16 @@ const Asset = ({ className, icon }) =>
 	/>;
 
 Asset.propTypes = {
-	icon: PropTypes.oneOf(Object.keys(ICON_SRCS))
+	icon: PropTypes.oneOf([
+		"bee",
+		"flowerpot",
+		"hi",
+		"lightbulb",
+		"location",
+		"location-active",
+		"logo-lhp-full",
+		"logo-lhp-small",
+	])
 };
 
 export default Asset;
