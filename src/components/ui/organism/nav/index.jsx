@@ -6,11 +6,6 @@ import NavItems from "./nav-items.json";
 import Styles from "./index.module.scss";
 
 
-console.log(
-	`MAPBOX_TOKEN ${ process.env.MAPBOX_TOKEN }`,
-	`MAPBOX_STYLE_URL ${ process.env.MAPBOX_STYLE_URL }`
-);
-
 export default class Nav extends Component {
 	static propTypes = {};
 	
