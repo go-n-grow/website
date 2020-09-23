@@ -73,6 +73,8 @@ export default class Mapbox extends Component {
 	}
 
 	componentDidMount () {
+		console.log("MAPBOX MOUNTED");
+
 		this.initMapInstance();
 	}
 
@@ -89,6 +91,7 @@ export default class Mapbox extends Component {
 			maxZoom: Mapbox.MAX_ZOOM
 		});
 
+		console.log("MAPBOX ONLOAD");
 		Mapbox.MapInstance.on("load", this.onMapReady.bind(this));
 	}
 	
@@ -97,6 +100,7 @@ export default class Mapbox extends Component {
 	}
 
 	onMapReady () {
+		console.log("MAPBOX LOADED");
 		// load marker image
 		Mapbox.MapInstance.loadImage(IconSrc, (error, image) => {
 			Mapbox.MapInstance.addImage("location", image);
