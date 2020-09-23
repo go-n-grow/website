@@ -6,7 +6,6 @@ import IconSrc from "./location.png";
 import Styles from "./mapbox.module.scss";
 
 
-
 export default class Mapbox extends Component {
 	static propTypes = {
 		participants: PropTypes.array.isRequired,

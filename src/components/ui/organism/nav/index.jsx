@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { ArrowRight } from "reusable-components/dist/ui/buttons";
+import { Default as DefaultButton } from "reusable-components/dist/ui/buttons";
 import NavComp from "reusable-components/dist/ui/nav";
-import Button from "react-bulma-components/lib/components/button/button";
 
 import NavItems from "./nav-items.json";
+import Styles from "./index.module.scss";
 
+
+console.log(
+	`MAPBOX_TOKEN ${ process.env.MAPBOX_TOKEN }`,
+	`MAPBOX_STYLE_URL ${ process.env.MAPBOX_STYLE_URL }`
+);
 
 export default class Nav extends Component {
 	static propTypes = {};
@@ -23,7 +28,8 @@ export default class Nav extends Component {
 
 
 const CTAButton = () =>
-	<ArrowRight
+	<DefaultButton
+		className={ Styles.ctaBtn }
 		color={ "primary" }>
 		Jetzt bewerben
-	</ArrowRight>;
+	</DefaultButton>;

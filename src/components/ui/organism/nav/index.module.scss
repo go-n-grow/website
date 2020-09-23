@@ -1,0 +1,10 @@
+@import "src/styling/variables";
+
+
+.ctaBtn {
+	padding: 0.25rem 0.9rem;
+
+	&:after {
+		border-left-color: $primary;
+	}
+}
