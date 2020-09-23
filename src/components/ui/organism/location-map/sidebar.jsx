@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import Heading from "react-bulma-components/lib/components/heading/heading";
-import { cn } from "reusable-components/helper";
-import Icon from "../../atom/icon";
+import { cn } from "reusable-components/dist/helper";
 
+import Icon from "../../atom/icon";
 import Styles from "./sidebar.module.scss";
 
 

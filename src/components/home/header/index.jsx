@@ -3,7 +3,8 @@ import React, { useState } from "react";
 
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
-import { cn } from "reusable-components/helper";
+import { cn } from "reusable-components/dist/helper";
+
 import Icon from "../../ui/atom/icon";
 
 import Styles from "./index.module.scss";

@@ -1,12 +1,14 @@
-const Path = require("path");
-
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-	actions.setWebpackConfig({
-		resolve: {
-			alias: {
-				"reusable-components": Path.resolve(__dirname, "node_modules/reusable-components/dist/")
+exports.onCreateWebpackConfig = ({ actions, loaders, stage }) => {
+	if (stage === "build-html") {
+		actions.setWebpackConfig({
+			module: {
+				rules: [
+					{
+						test: /mapbox-gl/,
+						use: loaders.null()
+					},
+				],
 			}
-		}
-	});
+		})
+	}
 };

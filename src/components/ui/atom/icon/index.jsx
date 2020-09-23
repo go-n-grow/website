@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { cn } from "reusable-components/helper";
+import { cn } from "reusable-components/dist/helper";
 
 import Styles from "./index.module.scss";
 

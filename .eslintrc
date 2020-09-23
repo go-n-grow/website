@@ -8,12 +8,5 @@
 	],
 	"rules": {
 		"react/jsx-uses-react": 1
-	},
-	"settings": {
-		"import/resolver": {
-			"alias": [
-				["reusable-components", "./node_modules/reusable-components/dist/"]
-			]
-		}
 	}
 }
