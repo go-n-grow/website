@@ -1,5 +1,6 @@
 import { graphql, StaticQuery } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
@@ -31,72 +32,104 @@ export default () =>
 					}
 				}
 			}` }
-		render={ Header }
+		render={ (data) => <Header { ...data } /> }
 	/>;
 
-const Header = ({ file }) => {
-	const [isVideoPlaying, setPlayState] = useState(false);
 
-	return (
-		<div className={ cn(
-			Styles.header,
-			isVideoPlaying && Styles.videoPlaying
-		) }>
-			<video
-				onPlay={ () => setPlayState(true) }
-				className={ Styles.video }
-				autoPlay
-				loop
-				playsInline
-				muted>
+class Header extends React.Component {
+	static propTypes = {
+		file: PropTypes.string.isRequired
+	};
 
-				{ Object.keys(file).map(key =>
-					<Source
-						key={ key }
-						{ ...file[key] }
-					/>
-				) }
+	videoRef = React.createRef();
 
-			</video>
+	state = {
+		isVideoPlaying: false
+	}
 
-			<div className={ Styles.intro }>
-				<p className={ Styles.locationContainer }>
+	componentDidMount () {
+		if (
+			this.videoRef.current &&
+			!this.videoRef.current.paused
+		) {
+			this.onPlayVideo();
+		}
+	}
+
+	onPlayVideo () {
+		this.setState({
+			...this.state,
+			isVideoPlaying: true
+		});
+	}
+
+	render () {
+		const { file } = this.props;
+
+		return (
+			<div className={ cn(
+				Styles.header,
+				this.state.isVideoPlaying && Styles.videoPlaying
+			) }>
+				<video
+					ref={ this.videoRef }
+					onPlay={ this.onPlayVideo.bind(this) }
+					onLoad={ this.onPlayVideo.bind(this) }
+					className={ Styles.video }
+					autoPlay
+					loop
+					playsInline
+					muted>
+
+					{ Object.keys(file).map(key =>
+						<Source
+							key={ key }
+							{ ...file[key] }
+						/>
+					) }
+
+				</video>
+
+				<div className={ Styles.intro }>
+					<p className={ Styles.locationContainer }>
 					<span className={ Styles.location }>
 						<Icon className={ Styles.icon } icon={ "location" } />
 						Potsdam
 					</span>
-				</p>
+					</p>
 
-				<Heading
-					className={ Styles.heading }
-					textColor={ "white" }
-					textSize={ 1 }
-					renderAs={ "h1" }
-					textAlignment={ "centered" }>
+					<Heading
+						className={ Styles.heading }
+						textColor={ "white" }
+						textSize={ 1 }
+						renderAs={ "h1" }
+						textAlignment={ "centered" }>
 
-					<SpanGenerator
-						string={ "Go ’n’ Grow!" }
-					/>
+						<SpanGenerator
+							string={ "Go ’n’ Grow!" }
+						/>
 
-				</Heading>
+					</Heading>
 
-				<Content
-					renderAs={ "h2" }
-					textSize={ 3 }
-					className={ Styles.description }
-					textAlignment={ "centered" }
-					textColor={ "white" }
-					italic>
+					<Content
+						renderAs={ "h2" }
+						textSize={ 3 }
+						className={ Styles.description }
+						textAlignment={ "centered" }
+						textColor={ "white" }
+						italic>
 
-					<span>Samen pflanzen. Kiez verschönern.</span> <br/>
-					<span>Hungrige Insekten retten.</span> <br/>
-					<span>Es ist sooo einfach!</span>
+						<span>Samen pflanzen. Kiez verschönern.</span> <br/>
+						<span>Hungrige Insekten retten.</span> <br/>
+						<span>Es ist sooo einfach!</span>
 
-				</Content>
+					</Content>
+				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
+
 
 const Source = ({ path, ext }) => {
 	return (
