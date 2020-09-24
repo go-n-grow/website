@@ -2,7 +2,7 @@
 
 
 .container {
-	max-height: 90vh;
+	max-height: 80vh;
 	height: 100%;
 
 	margin-bottom: 1rem;
@@ -17,7 +17,7 @@
 	box-shadow: $shadow-default;
 
 	.sidebarWrapper {
-		max-height: 90vh;
+		height: 100%;
 
 		position: relative;
 		z-index: 1;
