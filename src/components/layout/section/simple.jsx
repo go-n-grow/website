@@ -1,7 +1,8 @@
 import React from "react";
 import Heading from "react-bulma-components/lib/components/heading/heading";
+
+import Asset from "../../ui/atom/asset";
 import Styles from './simple.module.scss';
-import Icon from "../../ui/atom/icon";
 import Section from "./index";
 
 
@@ -14,7 +15,7 @@ const SimpleSection = ({ icon = "location", title, description, children, ...pro
 				textAlignment={ "centered" }
 				className={ Styles.iconWrapper }>
 
-				<Icon
+				<Asset
 					icon={ icon }
 					className={ Styles.icon }
 				/>

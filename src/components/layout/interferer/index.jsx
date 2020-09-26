@@ -7,7 +7,7 @@ import Content from "react-bulma-components/lib/components/content/content";
 import Button from "react-bulma-components/lib/components/button/button";
 import ButtonGroup from "react-bulma-components/lib/components/button/components/button-group";
 
-import Icon from "../../ui/atom/icon";
+import Asset from "../../ui/atom/asset";
 import Styles from "./index.module.scss";
 
 
@@ -15,7 +15,7 @@ const Interferer = ({ icon, title, buttonTitle, onButtonClick, children }) =>
 	<div className={ Styles.containerWrapper }>
 		<Container className={ Styles.container }>
 
-			<Icon
+			<Asset
 				className={ Styles.icon }
 				icon={ icon }
 			/>
@@ -55,7 +55,7 @@ const Interferer = ({ icon, title, buttonTitle, onButtonClick, children }) =>
 	</div>;
 
 Interferer.propTypes = {
-	icon: Icon.propTypes.icon,
+	icon: Asset.propTypes.icon,
 	children: PropTypes.any
 };
 

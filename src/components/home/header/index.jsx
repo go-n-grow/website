@@ -38,7 +38,7 @@ export default () =>
 
 class Header extends React.Component {
 	static propTypes = {
-		file: PropTypes.string.isRequired
+		file: PropTypes.object.isRequired
 	};
 
 	videoRef = React.createRef();

@@ -6,7 +6,7 @@ import Tile from "./tile";
 const Why = () =>
 	<Tile
 		title={ "Was das bringt?" }
-		icon={ "bee" }>
+		graphic={ "bee" }>
 
 		<p>
 			Mit deiner Hilfe verschönerst du die Stadt, deinen Kiez und stärkst unser Bewusstsein für Ökologie. Wir lassen Potsdam neu erblühen. Aus grau wird bunt! Es gibt nur Vorteile.

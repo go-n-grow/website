@@ -1006,7 +1006,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.10.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -7618,6 +7618,13 @@ gatsby-page-utils@^0.2.23:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-create-client-paths@^2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-2.3.11.tgz#eecd44a7ae2bcc2127017630802f483006ec66cd"
+  integrity sha512-AfpvLMbnOVnAs0eBQgPWQ8UGlrUOk2zd4Tp03rE8FFCDRgpXwi88PQzhkPT9A/APKM3jph1wXzoVkBysmu+Btw==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+
 gatsby-plugin-manifest@^2.4.24:
   version "2.4.27"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.27.tgz#e87102137efcb1fe66ab27f913241f9c1b2f4fa7"
@@ -13744,7 +13751,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.12.0:
+react-dom@^16.12.0, react-dom@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -14460,8 +14467,8 @@ retry@0.12.0, retry@^0.12.0:
   integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
 
 reusable-components@Coderwelsch/reusable-components:
-  version "1.0.0"
-  resolved "https://codeload.github.com/Coderwelsch/reusable-components/tar.gz/e9fd53926ba8ddb10a874765dc3ea1b2be371282"
+  version "1.0.1"
+  resolved "https://codeload.github.com/Coderwelsch/reusable-components/tar.gz/70380336cdd7cae453d81838e75886b70185d68e"
   dependencies:
     "@babel/cli" "^7.11.6"
     "@babel/core" "^7.11.6"
@@ -14476,6 +14483,7 @@ reusable-components@Coderwelsch/reusable-components:
     optimize-css-assets-webpack-plugin "^5.0.4"
     progress-bar-webpack-plugin "^2.1.0"
     react-bulma-components "^3.2.0"
+    react-dom "^16.13.1"
     react-helmet "^6.0.0"
     webpack "^4.44.2"
     webpack-bundle-analyzer "^3.9.0"

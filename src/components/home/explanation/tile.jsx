@@ -8,16 +8,17 @@ import Asset from "../../ui/atom/asset";
 import Styles from "./tile.module.scss";
 
 
-const Tile = ({ title, icon, children }) =>
+const Tile = ({ title, graphic, children }) =>
 	<Columns
 		className={ Styles.tile }
 		centered
 		marginless>
 
-		<Column
-			narrow
-			className={ Styles.icon }>
-			<Asset icon={ icon } />
+		<Column narrow>
+			<Asset
+				className={ Styles.icon }
+				graphic={ graphic }
+			/>
 		</Column>
 
 		<Column

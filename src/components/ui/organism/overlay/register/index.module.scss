@@ -1,0 +1,32 @@
+@import "src/styling/variables";
+
+
+.overlay {
+	max-width: 35rem !important;
+	min-height: auto !important;
+
+	.header {
+		position: sticky;
+		top: 0;
+
+		width: 100%;
+
+		padding: 1rem 4rem;
+
+		background: $primary;
+
+		.close {
+			position: absolute;
+			right: 0.5rem;
+			top: 0.5rem;
+
+			cursor: pointer;
+
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

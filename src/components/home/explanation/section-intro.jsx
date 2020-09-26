@@ -6,7 +6,7 @@ import Tile from "./tile";
 const Explanation = () =>
 	<Tile
 		title={ "Wir sind …" }
-		icon={ "hi" }>
+		graphic={ "hi" }>
 
 		<p>
 			… die Initiative <strong><i>»&#8202;Go&nbsp;’n’&nbsp;Grow&#8202;«</i></strong> der FH&nbsp;Potsdam.

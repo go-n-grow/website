@@ -5,11 +5,9 @@
 	margin-bottom: 3rem;
 
 	.icon-wrapper {
-		margin-bottom: 1rem !important;
-
 		.icon {
-			font-size: 7rem;
-			color: $text;
+			width: 100%;
+			max-width: 9rem;
 		}
 	}
 

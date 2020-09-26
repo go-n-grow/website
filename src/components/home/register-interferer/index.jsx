@@ -9,7 +9,7 @@ const RegisterInterferer = () =>
 		buttonTitle={ "Jetzt anmelden" }
 		onButtonClick={ () => alert("HEHEHEHE") }>
 
-		Schreibe uns bei Interesse eine unverbindliche Mail. Keine Sorge, dir blüht nichts schlimmes – außer die Blumen, die du von uns bekommst 🙂.
+		Schreibe uns bei Interesse eine unverbindliche Mail. Keine Sorge, dir blüht nichts schlimmes – außer die Blumen, die du von uns bekommst <span role={ "img" } aria-label={  "Lächelndes Gesicht" }>🙂</span>.
 
 	</Interferer>
 

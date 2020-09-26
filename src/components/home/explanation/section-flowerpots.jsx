@@ -1,13 +1,13 @@
 import React from "react";
+import Asset from "../../ui/atom/asset";
 
 import Tile from "./tile";
 import Styles from "./section-flowerpots.module.scss";
-import LogoSrc from "../../../assets/graphics/logo-lhp-full.svg";
 
 
 const Flowerpots = () =>
 	<Tile
-		icon={ "flowerpot" }
+		graphic={ "flowerpot" }
 		title={ "Blumentöpfe für Potsdamer&nbsp;Geschäfte!" }>
 
 		<p>
@@ -32,8 +32,9 @@ const Flowerpots = () =>
 				href={ "https://vv.potsdam.de/vv/oe/173010100000024481.php" }
 				target={ "_blank" }
 				rel={ "noopener noreferrer" }>
-				<img
-					src={ LogoSrc }
+
+				<Asset
+					logo={ "potsdam-full" }
 					alt={ "Logo Stadt Potsdam" }
 					className={ Styles.logo }
 				/>

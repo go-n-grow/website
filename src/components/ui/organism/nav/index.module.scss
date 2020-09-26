@@ -44,6 +44,8 @@
 .ctaBtn {
 	padding: 0.25rem 0.9rem;
 
+	text-transform: uppercase;
+
 	&:after {
 		border-left-color: $primary;
 	}

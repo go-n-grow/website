@@ -1,6 +1,12 @@
 const path = require('path')
 
 
+/*
+*
+* Webpack Mods
+*
+* */
+
 exports.onCreateWebpackConfig = ({ actions, loaders, stage }) => {
 	const config = {
 		resolve: {
