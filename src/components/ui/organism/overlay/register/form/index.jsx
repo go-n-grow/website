@@ -251,9 +251,15 @@ const Textarea = ({ id, label, onChange, value, ...props }) =>
 	</div>;
 
 const Checkbox = ({ id, label, checked, onChange, disabled, ...props }) => {
+	const onChangeHandler = () => disabled ?
+		undefined :
+		() => onChange({ target: { id, value: !checked }
+	});
+
 	return (
 		<div
 			role={ "checkbox" }
+			tabIndex={ 0 }
 			aria-checked={ checked }
 			aria-label={ label }
 			className={ cn(
@@ -261,9 +267,8 @@ const Checkbox = ({ id, label, checked, onChange, disabled, ...props }) => {
 				Styles.isCheckbox,
 				checked && Styles.isChecked,
 			) }
-			onClick={ disabled ? undefined :
-				() => onChange({ target: { id, value: !checked } })
-			}>
+			onKeyPress={ onChangeHandler }
+			onClick={ onChangeHandler }>
 
 			<div
 				className={ Styles.checkbox }
