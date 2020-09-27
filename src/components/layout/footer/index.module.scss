@@ -1,0 +1,61 @@
+@import "src/styling/variables";
+
+
+.section {
+	position: relative;
+
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+
+	.heading {
+		margin-bottom: 0 !important;
+
+		text-align: center;
+		font-size: 8rem;
+	}
+
+	.subline {
+		opacity: 0.7;
+		padding: 0 1rem;
+		text-align: center;
+	}
+}
+
+.sectionFooterNav {
+	position: relative;
+
+	margin-top: 6rem;
+
+	background: darken($body-background-color, 5%);
+
+	.navColumns {
+		justify-content: space-between;
+	}
+
+	.link {
+		position: relative;
+
+		font-weight: bold;
+		color: $white;
+
+		&:hover {
+			color: $primary;
+		}
+
+		&:after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+
+			width: 100%;
+			height: 0.175rem;
+
+			border-radius: 0.1rem;
+
+			content: "";
+
+			background: $primary;
+		}
+	}
+}
+

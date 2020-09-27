@@ -251,10 +251,8 @@ const Textarea = ({ id, label, onChange, value, ...props }) =>
 	</div>;
 
 const Checkbox = ({ id, label, checked, onChange, disabled, ...props }) => {
-	const onChangeHandler = () => disabled ?
-		undefined :
-		() => onChange({ target: { id, value: !checked }
-	});
+	const onChangeHandler = disabled ? undefined :
+		() => onChange({ target: { id, value: !checked } });
 
 	return (
 		<div

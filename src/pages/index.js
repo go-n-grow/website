@@ -5,6 +5,7 @@ import Header from "../components/home/header/index.jsx";
 import Explanation from "../components/home/explanation/index.jsx";
 import Map from "../components/home/map/index.jsx";
 import RegisterInterferer from "../components/home/register-interferer";
+import Footer from "../components/layout/footer";
 import Nav from "../components/ui/organism/nav";
 import RegisterOverlay from "../components/ui/organism/overlay/register";
 
@@ -18,6 +19,8 @@ const App = ({ overlayActive, setOverlayActive }) => {
 			<Explanation/>
 			<RegisterInterferer/>
 			<Map/>
+
+			<Footer/>
 
 			<RegisterOverlay
 				isActive={ overlayActive }

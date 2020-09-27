@@ -1,0 +1,14 @@
+@import "../styling/variables";
+
+
+.content {
+	padding: 1.5rem;
+
+	border-radius: 0.25rem;
+
+	color: $dark;
+
+	background: $white-bis;
+
+	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+}
