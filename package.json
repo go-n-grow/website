@@ -33,7 +33,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-mapbox-gl": "^4.8.6",
-    "reusable-components": "/Users/coderwelsch/Documents/Work/02 Development/Github/reusable-components",
+    "reusable-components": "Coderwelsch/reusable-components",
     "takeshape-cli": "^5.0.7",
     "tsg": "^1.0.0"
   },
