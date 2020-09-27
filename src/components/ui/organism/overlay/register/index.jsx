@@ -7,30 +7,35 @@ import Asset from "../../../atom/asset";
 import Styles from "./index.module.scss";
 
 
-const RegisterOverlay = props =>
-	<Overlay
-		contentProps={ {
-			className: Styles.overlay
-		} }
-		{ ...props }>
+const RegisterOverlay = props => {
+	if (typeof document === "undefined") {
+		return null;
+	}
 
-		<div className={ Styles.header }>
-			<Heading
-				textAlignment={ "centered" }
-				textColor={ "white" }>
-				Anmeldung
+	return (
+		<Overlay
+			contentProps={ {
+				className: Styles.overlay,
+			} }
+			{ ...props }>
 
-				<Asset
-					icon={ "cross" }
-					className={ Styles.close }
-					onClick={ props.onClose }
-				/>
-			</Heading>
+			<div className={ Styles.header }>
+				<Heading
+					textAlignment={ "centered" }
+					textColor={ "white" }>
+					Anmeldung
 
-		</div>
+					<Asset
+						icon={ "cross" }
+						className={ Styles.close }
+						onClick={ props.onClose }
+					/>
+				</Heading>
+			</div>
 
-		<Form />
-
-	</Overlay>;
+			<Form/>
+		</Overlay>
+	);
+};
 
 export default RegisterOverlay;

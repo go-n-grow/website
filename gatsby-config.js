@@ -9,7 +9,7 @@ require("dotenv").config({
 module.exports = {
 	siteMetadata: {
 		siteUrl: `https://www.go-n-grow.org`,
-		title: `Go ‘n‘ Grow!`,
+		title: `Go ’n’ Grow!`,
 		description: `Samen pflanzen. Kiez verschönern. Insekten retten. Es ist soooo einfach!`,
 		location: "Potsdam",
 		author: `Joseph Ribbe, Coderwelsch`,

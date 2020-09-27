@@ -8,16 +8,18 @@
 	height: 95vh;
 
 	&.video-playing {
-		.intro .heading span {
-			animation-name: span-fade-in;
-		}
+		.intro {
+			.heading span {
+				animation-name: span-fade-in;
+			}
 
-		.intro .description {
-			animation-name: desc-fade-in;
-		}
+			.description {
+				animation-name: desc-fade-in;
+			}
 
-		.intro .locationContainer {
-			animation-name: location-fade-in;
+			.locationContainer {
+				animation-name: location-fade-in;
+			}
 		}
 	}
 
