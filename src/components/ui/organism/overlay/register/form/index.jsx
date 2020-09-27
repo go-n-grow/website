@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Button from "react-bulma-components/lib/components/button/button";
 import ButtonGroup from "react-bulma-components/lib/components/button/components/button-group";
@@ -8,7 +9,10 @@ import Styles from "./index.module.scss";
 
 
 export default class Form extends Component {
-	static propTypes = {};
+	static propTypes = {
+		onDone: PropTypes.func.isRequired,
+		onError: PropTypes.func.isRequired
+	};
 
 	static defaultProps = {};
 
@@ -23,8 +27,9 @@ export default class Form extends Component {
 			message: "",
 			gdprAccept: false,
 		},
-		isValid: false,
+		isValid: true,
 		isSending: false,
+		sendStatus: false
 	};
 
 	onChange ({ target }) {
@@ -57,26 +62,50 @@ export default class Form extends Component {
 	}
 
 	async sendForm () {
-		const request = new XMLHttpRequest();
-		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		request.open("post", "/php/send-mail.php");
+		const {
+			mail, address,
+			shopName: shop,
+			owner,
+			message,
+		} = this.state.form;
 
-		request.onload = () => {
-			console.log(request.status);
-		};
-
-		request.onerror = () => {
-			console.error(request.status);
-		};
-
-		const response = request.send({
-			mail: this.state.form.mail,
-			owner: this.state.form.owner,
-			shop: this.state.form.shopName,
-			message: this.state.form.message,
+		const body = JSON.stringify({
+			mail,
+			address,
+			shop,
+			owner,
+			message
 		});
 
-		console.log(response);
+		const data = await fetch(
+			"/php/send-mail.php",
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body
+			}
+		);
+
+		if (data.status === 200) {
+			this.setState({
+				form: {
+					shopName: "",
+					address: "",
+					mail: "",
+					owner: "",
+					message: "",
+					gdprAccept: false,
+				},
+				isValid: false
+			}, () => {
+				this.props.onDone();
+			});
+		} else {
+			console.error(data);
+			this.props.onError();
+		}
 	}
 
 	handleSubmit (event) {

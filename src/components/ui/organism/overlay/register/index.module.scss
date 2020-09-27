@@ -1,32 +1,52 @@
 @import "src/styling/variables";
 
 
-.overlay {
+.overlayContent {
 	max-width: 35rem !important;
-	min-height: auto !important;
+	min-height: initial !important;
 
-	.header {
-		position: sticky;
-		top: 0;
-
-		width: 100%;
-
-		padding: 1rem 4rem;
-
-		background: $primary;
-
-		.close {
-			position: absolute;
-			right: 0.5rem;
-			top: 0.5rem;
-
-			cursor: pointer;
-
-			opacity: 0.5;
-
-			&:hover {
-				opacity: 1;
-			}
+	&.onError {
+		.header {
+			background: $warning;
 		}
+	}
+
+	&.onDone {
+		.header {
+			background: $success;
+		}
+	}
+}
+
+.header {
+	position: sticky;
+	top: 0;
+
+	width: 100%;
+
+	padding: 1rem 4rem;
+
+	background: $primary;
+
+	.close {
+		position: absolute;
+		right: 0.5rem;
+		top: 0.5rem;
+
+		cursor: pointer;
+
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.content {
+	padding: 2rem 4rem;
+
+	a {
+		background: $grey;
 	}
 }
