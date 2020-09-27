@@ -16,6 +16,7 @@
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-manifest": "^2.4.24",
     "gatsby-plugin-offline": "^3.2.24",
+    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.28",
@@ -32,7 +33,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-mapbox-gl": "^4.8.6",
-    "reusable-components": "Coderwelsch/reusable-components",
+    "reusable-components": "/Users/coderwelsch/Documents/Work/02 Development/Github/reusable-components",
     "takeshape-cli": "^5.0.7",
     "tsg": "^1.0.0"
   },

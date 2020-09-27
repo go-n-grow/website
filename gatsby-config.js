@@ -48,7 +48,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Go ‘n‘ Grow!`,
+				name: `Go ’n’ Grow!`,
 				short_name: `GnG`,
 				start_url: `/`,
 				background_color: `#663399`,

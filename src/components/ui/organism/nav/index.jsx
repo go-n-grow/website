@@ -34,11 +34,6 @@ export default class Nav extends Component {
 	render () {
 		return (
 			<>
-				<RegisterOverlay
-					isActive={ this.state.isActive }
-					onClose={ () => this.closeOverlay() }
-				/>
-
 				<NavComp
 					LogoComp={
 						Logo
@@ -61,6 +56,11 @@ export default class Nav extends Component {
 							Mitmachen
 						</DefaultButton>
 					}
+				/>
+
+				<RegisterOverlay
+					isActive={ this.state.isActive }
+					onClose={ this.closeOverlay.bind(this) }
 				/>
 			</>
 		);

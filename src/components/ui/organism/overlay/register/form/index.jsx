@@ -215,7 +215,6 @@ const Textarea = ({ id, label, onChange, value, ...props }) =>
 		</label>
 
 		<textarea
-			required
 			id={ id }
 			onChange={ onChange }
 			{ ...props }

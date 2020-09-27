@@ -8,12 +8,9 @@ import Styles from "./index.module.scss";
 
 
 const RegisterOverlay = props => {
-	if (typeof document === "undefined") {
-		return null;
-	}
-
 	return (
 		<Overlay
+			createPortal={ false }
 			contentProps={ {
 				className: Styles.overlay,
 			} }
