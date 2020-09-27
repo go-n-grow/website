@@ -18,6 +18,7 @@
     "gatsby-plugin-offline": "^3.2.24",
     "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-react-redux": "^1.1.0",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.28",
     "gatsby-plugin-zopfli": "^2.0.0",
@@ -33,6 +34,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-mapbox-gl": "^4.8.6",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
     "reusable-components": "Coderwelsch/reusable-components",
     "takeshape-cli": "^5.0.7",
     "tsg": "^1.0.0"

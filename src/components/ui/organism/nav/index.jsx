@@ -1,37 +1,28 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import { Default as DefaultButton } from "reusable-components/dist/ui/buttons";
 import NavComp from "reusable-components/dist/ui/nav";
 
 import Icon from "../../atom/icon";
-import RegisterOverlay from "../overlay/register";
 import NavItems from "./nav-items.json";
 import Styles from "./index.module.scss";
 
 
-export default class Nav extends Component {
+class Nav extends Component {
 	static propTypes = {};
-	
+
 	static defaultProps = {};
 
 	state = {
-		isActive: false
+		isActive: false,
 	};
 
-	closeOverlay () {
-		this.setState({
-			...this.state,
-			isActive: false
-		});
-	}
-
-	openOverlay () {
-		this.setState({
-			...this.state,
-			isActive: true
-		});
-	}
-	
 	render () {
+		const {
+			setOverlayActive,
+		} = this.props;
+
 		return (
 			<>
 				<NavComp
@@ -40,27 +31,24 @@ export default class Nav extends Component {
 					}
 					NavItems={ NavItems }
 					ContainerProps={ {
-						className: Styles.container
+						className: Styles.container,
 					} }
 					RootContainerProps={ {
 						className: Styles.rootContainer,
 					} }
 					NavItemsContainerProps={ {
-						className: Styles.navItems
+						className: Styles.navItems,
 					} }
 					CTAButtonComp={ () =>
 						<DefaultButton
 							className={ Styles.ctaBtn }
 							color={ "primary" }
-							onClick={ this.openOverlay.bind(this) }>
+							onClick={ () => setOverlayActive({
+								overlayActive: true,
+							}) }>
 							Mitmachen
 						</DefaultButton>
 					}
-				/>
-
-				<RegisterOverlay
-					isActive={ this.state.isActive }
-					onClose={ this.closeOverlay.bind(this) }
 				/>
 			</>
 		);
@@ -73,4 +61,16 @@ const Logo = () =>
 			icon={ "logo" }
 			className={ Styles.logo }
 		/>
-	</a>
+	</a>;
+
+const mapStateToProps = ({ overlayActive }) => {
+	return { overlayActive };
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		setOverlayActive: data => dispatch({ type: `SET_OVERLAY_ACTIVE`, ...data }),
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);

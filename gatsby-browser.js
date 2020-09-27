@@ -6,3 +6,7 @@
 
 // You can delete this file if you're not using it
 import "./src/styling/index.scss";
+import wrapWithProvider from "./wrap-with-provider";
+
+
+export const wrapRootElement = wrapWithProvider;

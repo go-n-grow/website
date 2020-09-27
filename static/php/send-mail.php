@@ -30,7 +30,6 @@
 		$message = $data["message"];
 
 		$userEmail = $data["mail"];
-		$userCCMail = $userEmail;
 		$userSubject = "Anmeldung von " . $shop;
 
 		$mailBody =

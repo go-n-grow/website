@@ -72,7 +72,7 @@ const RegisterDone = ({onClose}) =>
 			<Heading
 				textAlignment={ "centered" }
 				textColor={ "white" }>
-				Vielen Dank 🌻
+				Vielen Dank  <span role={ "img"} aria-label={ "Sonnenblume" }>🌻</span>
 
 				<Asset
 					icon={ "cross" }
@@ -88,7 +88,7 @@ const RegisterDone = ({onClose}) =>
 			className={ Styles.content }>
 
 			<p>
-				Wir haben Ihre Anmeldung erhalten und melden uns schnellst möglich zurück 🤜🤛.
+				Wir haben Ihre Anmeldung erhalten und melden uns schnellst möglich zurück <span role={ "img"} aria-label={ "Faust schläft Faust" }>🤜🤛</span>.
 			</p>
 
 		</Content>
@@ -100,7 +100,7 @@ const RegisterError = ({onClose}) =>
 			<Heading
 				textAlignment={ "centered" }
 				textColor={ "white" }>
-				Oh nein! 🙈
+				Oh nein!  <span role={ "img"} aria-label={ "Facepalm Smiley" }>🙈</span>
 
 				<Asset
 					icon={ "cross" }
