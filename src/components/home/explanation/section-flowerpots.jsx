@@ -12,7 +12,7 @@ const Flowerpots = () =>
 
 		<p>
 			Zusammen mit der <a href={ "https://vv.potsdam.de/vv/oe/173010100000024481.php" } target={ "_blank" } rel={ "noopener noreferrer" }><strong>Grünflächenverwaltung
-			der Stadt Potsdam</strong></a> vergeben wir an die ersten 10 interessierten Geschäfte (wie Cafés, Bars, Buchläden, etc.) kostenlose Blumenkästen und -töpfe, die vor den Laden gestellt werden können. Größe und Material (Stein, Holz, Ton) können dabei frei gewählt werden. Die Verwaltung kümmert sich um die Anmeldung und die Aufstellung der Töpfe.
+			der Stadt Potsdam</strong></a> vergeben wir an die <strong>ersten 10 interessierten Geschäfte</strong> (wie Cafés, Bars, Buchläden, etc.) kostenlose Blumenkästen und -töpfe, die vor den Laden gestellt werden können. Größe und Material (Stein, Holz, Ton) können dabei frei gewählt werden. Die Verwaltung kümmert sich um die Anmeldung und die Aufstellung der Töpfe.
 		</p>
 
 		<p>
