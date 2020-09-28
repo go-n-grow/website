@@ -11,7 +11,11 @@ import Styles from "./sidebar.module.scss";
 export default class Sidebar extends Component {
 	static propTypes = {
 		participants: PropTypes.array.isRequired,
-		onSelectEntry: PropTypes.func.isRequired
+		onSelectEntry: PropTypes.func.isRequired,
+		selectedLocation: PropTypes.oneOfType([
+			PropTypes.number,
+			PropTypes.oneOf([ null ])
+		])
 	};
 	
 	static defaultProps = {};
@@ -23,7 +27,7 @@ export default class Sidebar extends Component {
          flowerpotsCount,
          flowerpotState,
          contact
-     }, index) {
+    }, index) {
 		const triggerEvent = index === this.props.selectedLocation ?
 			undefined : () => this.props.onSelectEntry(index)
 
@@ -46,7 +50,7 @@ export default class Sidebar extends Component {
 					<Heading
 						className={ Styles.title }
 						textSize={ 5 }
-						textColor={ "black" }>
+						textColor={ "dark" }>
 						{ company }
 					</Heading>
 

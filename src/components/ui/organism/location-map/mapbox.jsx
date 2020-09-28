@@ -9,7 +9,11 @@ import Styles from "./mapbox.module.scss";
 export default class Mapbox extends Component {
 	static propTypes = {
 		participants: PropTypes.array.isRequired,
-		onSelectEntry: PropTypes.func.isRequired
+		onSelectEntry: PropTypes.func.isRequired,
+		selectedLocation: PropTypes.oneOfType([
+			PropTypes.number,
+			PropTypes.oneOf([ null ])
+		])
 	};
 	
 	static defaultProps = {};
@@ -33,7 +37,7 @@ export default class Mapbox extends Component {
 		super(props);
 
 		const { location } = props.participants[
-			props.selectedLocation !== false ? props.selectedLocation: 0
+			props.selectedLocation !== null ? props.selectedLocation : 0
 		];
 
 		this.state = {
@@ -47,7 +51,7 @@ export default class Mapbox extends Component {
 
 	componentDidUpdate (prevProps, prevState, snapshot) {
 		// false means «not set yet»
-		const isLocationSelected = this.props.selectedLocation !== false;
+		const isLocationSelected = this.props.selectedLocation !== null;
 
 		const { location } = this.props.participants[
 			isLocationSelected ? this.props.selectedLocation: 0

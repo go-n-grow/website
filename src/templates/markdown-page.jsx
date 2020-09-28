@@ -29,7 +29,7 @@ export default class MarkdownPage extends Component {
 								<Link to={ "/" }>
 									<Button
 										size={ "medium" }
-										color={ "dark" }
+										color={ "primary" }
 										className={ "has-margin-top-md has-margin-bottom-md" }>
 										← Zurück zur Startseite
 									</Button>

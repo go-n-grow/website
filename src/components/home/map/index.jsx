@@ -10,7 +10,7 @@ export default () =>
 		id={ "geschaefte" }
 		icon={ "location" }
 		title={ "Die Geschäfte" }
-		description={ "Diese Geschäfte machen bei unserer Aktion mit. Stattet ihnen doch gerne mal einen Besuch ab ;-) …" }>
+		description={ "Diese Geschäfte machen bei unserer Aktion mit. Stattet ihnen doch gerne mal einen Besuch ab und pflanzt ein paar Samen ;-) …" }>
 
 		<LocationMap />
 

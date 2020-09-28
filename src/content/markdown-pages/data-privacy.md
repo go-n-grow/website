@@ -1,6 +1,6 @@
 ---
 
-title: "Datenschutzhinweise | Coderwelsch – Coding & Design, Joseph Ribbe"
+title: "Datenschutzhinweise"
 meta:
  - name: "description"
    content: "Datenschutzhinweise"
@@ -11,7 +11,7 @@ meta:
 
 Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
 
-Coderwelsch – Coding & Design  
+**Go ’n’ Grow 🌻**  
 Joseph Ribbe  
 Heinrich-Mann-Allee 23  
 14473 Potsdam

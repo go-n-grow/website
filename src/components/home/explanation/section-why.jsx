@@ -9,11 +9,13 @@ const Why = () =>
 		graphic={ "bee" }>
 
 		<p>
-			Mit deiner Hilfe verschönerst du die Stadt, deinen Kiez und stärkst unser Bewusstsein für Ökologie. Wir lassen Potsdam neu erblühen. Aus grau wird bunt! Es gibt nur Vorteile.
+			Mit deiner Hilfe verschönerst du die Stadt, deinen Kiez und stärkst unser Bewusstsein für Ökologie.
+			Das neue Blütenmeer in der Stadt bietet neue Nahrungsquellen für extrem wichtige Insektenarten wie z.&nbsp;B.
+			Wildbienen und andere bestäubende&nbsp;Insektenarten.
 		</p>
 
-		<p>
-			Das neue Blütenmeer in der Stadt bietet neue Nahrungsquellen für extrem wichtige Insektenarten wie z. B. Wildbienen und andere bestäubende Insektenarten.
+		<p className={ "is-italic" }>
+			Wir lassen Potsdam neu erblühen. Aus grau wird bunt! Es gibt nur&nbsp;Vorteile.
 		</p>
 
 	</Tile>;

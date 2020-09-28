@@ -27,10 +27,14 @@ export default class Footer extends Component {
 								</p>
 							</Column>
 
-							<Column narrow className={ Styles.columnLeft }>
-								<p className={ "has-text-white" }>
+							<Column narrow>
+								<a
+									href={ "https://www.coderwelsch.com" }
+									target={ "_blank" }
+									rel={ "noopener noreferrer" }
+									className={ Styles.link }>
 									© Coderwelsch – Coding & Design
-								</p>
+								</a>
 							</Column>
 						</Columns>
 					</Container>

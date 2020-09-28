@@ -55,14 +55,14 @@
 			border-radius: $border-radius-small;
 			border: 2px solid transparent;
 
-			background: $light;
+			background: #fdf7f3;
 
 			&:invalid:not(:empty) {
 				border-color: $warning-light;
 				outline-color: $warning-light;
 			}
 
-			&:valid {
+			&:valid:not(:empty) {
 				border-color: $primary;
 			}
 		}
@@ -82,7 +82,7 @@
 
 			border-radius: $border-radius-small;
 
-			background: $background;
+			background: #fdf7f3;
 
 			input {
 				max-width: 0;
@@ -94,7 +94,7 @@
 			}
 
 			&.isChecked {
-				background: darken($background, 10%);
+				background: darken(#fdf7f3, 10%);
 
 				.checkbox:after {
 					opacity: 1;

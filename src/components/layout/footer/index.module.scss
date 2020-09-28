@@ -39,7 +39,11 @@
 		color: $white;
 
 		&:hover {
-			color: $primary;
+			color: darken($body-background-color, 30%);
+
+			&:after {
+				background: darken($body-background-color, 30%);
+			}
 		}
 
 		&:after {
@@ -54,7 +58,7 @@
 
 			content: "";
 
-			background: $primary;
+			background: $white;
 		}
 	}
 }
