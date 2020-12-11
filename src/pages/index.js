@@ -11,28 +11,24 @@ import Nav from "../components/ui/organism/nav";
 import RegisterOverlay from "../components/ui/organism/overlay/register";
 
 
-const App = ({ overlayActive, setOverlayActive }) => {
-	return (
-		<Page subTitle={ "Willkommen" }>
-			<Nav/>
+const App = ({ overlayActive, setOverlayActive }) =>
+	<Page subTitle={ "Willkommen" }>
+		<Nav/>
 
-			<Header/>
-			<Explanation/>
-			<RegisterInterferer/>
-			<Map/>
+		<Header/>
+		<Explanation/>
+		<RegisterInterferer/>
+		<Map/>
 
-			<Footer/>
+		<Footer/>
 
-			<RegisterOverlay
-				isActive={ overlayActive }
-				onClose={ () => setOverlayActive({
-					overlayActive: false
-				}) }
-			/>
-
-		</Page>
-	);
-};
+		<RegisterOverlay
+			isActive={ overlayActive }
+			onClose={ () => setOverlayActive({
+				overlayActive: false
+			}) }
+		/>
+	</Page>;
 
 const mapStateToProps = ({ overlayActive }) => {
 	return { overlayActive }
