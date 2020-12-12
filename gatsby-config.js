@@ -85,7 +85,7 @@ module.exports = {
 				requireConsent: false,
 				disableCookies: false,
 				cookieDomain: '*.go-n-grow.org',
-				localScript: '/matomo.js',
+				dev: false
 			},
 		}
 	],
