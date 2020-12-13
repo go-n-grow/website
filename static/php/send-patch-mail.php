@@ -7,7 +7,7 @@
 	require './phpmailer-6.1.7/src/PHPMailer.php';
 	require './phpmailer-6.1.7/src/SMTP.php';
 
-	require './config-patch.php';
+	require './config.php';
 
 	$mail = new PHPMailer(true);
 
