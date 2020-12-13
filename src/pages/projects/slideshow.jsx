@@ -4,10 +4,13 @@ import React from "react";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
 import Styles from "./koeln.module.scss";
+
 import "./koeln.scss";
 
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slideshow = () => {
 	const result = useStaticQuery(graphql`
@@ -20,6 +23,10 @@ const Slideshow = () => {
 					relativePath: {
 						regex: "/^assets\\/images\\/growkit\//"
 					}
+				}, 
+				sort: {
+					order: ASC, 
+					fields: name
 				}
 			) {
 				edges {
@@ -49,7 +56,10 @@ const Slideshow = () => {
 	`);
 
 	return (
-		<AwesomeSlider
+		<AutoplaySlider
+			play={ true }
+			cancelOnInteraction={ false }
+			interval={ 5000 }
 			className={ Styles.slideshow }>
 			{ result.allFile.edges.map(({ node }) =>
 				<div
@@ -61,7 +71,7 @@ const Slideshow = () => {
 					/>
 				</div>,
 			) }
-		</AwesomeSlider>
+		</AutoplaySlider>
 	);
 };
 

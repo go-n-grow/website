@@ -1,3 +1,6 @@
+@import "src/styling/variables";
+
+
 .awssld {
 	--organic-arrow-thickness: 0.25rem;
 	--organic-arrow-border-radius: 30px;
@@ -14,6 +17,11 @@
 
 	border: 0.2rem solid white;
 	border-radius: 0.5rem;
+}
+
+.awssld__timer {
+	background: red !important;
+	opacity: 0.5;
 }
 
 .awssld__content {
