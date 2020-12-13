@@ -1,6 +1,6 @@
 import React from "react";
 
-import Tile from "./tile";
+import Tile from "../../../../layout/tile";
 
 
 const Explanation = () =>

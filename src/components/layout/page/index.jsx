@@ -3,7 +3,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 
-const Page = ({ subTitle, children }) => {
+const Page = ({
+	subTitle,
+	title,
+	description,
+	location,
+	siteUrl,
+	children
+}) => {
 	const result = useStaticQuery(graphql`
 		query {
 			site {
@@ -20,20 +27,20 @@ const Page = ({ subTitle, children }) => {
 
 	const {
 		author,
-		description,
-		location,
-		siteUrl,
-		title,
+		description: defaultDescription,
+		location: defaultLocation,
+		siteUrl: defaultSiteUrl,
+		title: defaultTitle,
 	} = result.site.siteMetadata;
 
 	return (
 		<>
 			<Helmet
-				title={ `${ subTitle } | ${ title }` }
+				title={ `${ subTitle } | ${ title || defaultTitle }` }
 				meta={ [
 					{
 						property: `description`,
-						content: description,
+						content: description || defaultDescription,
 					}, {
 						property: `author`,
 						content: author,
@@ -41,19 +48,19 @@ const Page = ({ subTitle, children }) => {
 
 					{
 						property: `og:title`,
-						content: `${ subTitle } | ${ title }`,
+						content: `${ subTitle } | ${ title || defaultTitle }`,
 					}, {
 						property: `og:location`,
-						content: location,
+						content: location || defaultLocation,
 					}, {
 						property: `og:description`,
-						content: description,
+						content: description || defaultDescription,
 					}, {
 						property: `og:type`,
 						content: `website`,
 					}, {
 						property: `og:image`,
-						content: `${ siteUrl }/static/images/preview.png`,
+						content: `${ siteUrl || defaultSiteUrl }/static/images/preview.png`,
 					},
 				] }>
 			</Helmet>

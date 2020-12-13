@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import { Default as DefaultButton } from "reusable-components/dist/ui/buttons";
 import NavComp from "reusable-components/dist/ui/nav";
@@ -10,9 +11,15 @@ import Styles from "./index.module.scss";
 
 
 class Nav extends Component {
-	static propTypes = {};
+	static propTypes = {
+		buttonTitle: PropTypes.string,
+		navItems: PropTypes.array.isRequired
+	};
 
-	static defaultProps = {};
+	static defaultProps = {
+		buttonTitle: "Mitmachen",
+		navItems: NavItems
+	};
 
 	state = {
 		isActive: false,
@@ -29,7 +36,7 @@ class Nav extends Component {
 					LogoComp={
 						Logo
 					}
-					NavItems={ NavItems }
+					NavItems={ this.props.navItems }
 					ContainerProps={ {
 						className: Styles.container,
 					} }
@@ -46,7 +53,7 @@ class Nav extends Component {
 							onClick={ () => setOverlayActive({
 								overlayActive: true,
 							}) }>
-							Mitmachen
+							{ this.props.buttonTitle }
 						</DefaultButton>
 					}
 				/>

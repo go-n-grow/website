@@ -1,8 +1,8 @@
 import React from "react";
-import Asset from "../../ui/atom/asset";
+import Asset from "../../../../ui/atom/asset";
 
-import Tile from "./tile";
-import Styles from "./section-flowerpots.module.scss";
+import Tile from "../../../../layout/tile";
+import Styles from "./index.module.scss";
 
 
 const Flowerpots = () =>

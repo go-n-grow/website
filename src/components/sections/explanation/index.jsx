@@ -1,9 +1,9 @@
 import React from "react";
 
 import SimpleSection from "../../layout/section/simple";
-import Flowerpots from "./section-flowerpots";
-import Intro from "./section-intro";
-import Why from "./section-why";
+import Flowerpots from "./tiles/flowerpots";
+import Intro from "./tiles/intro";
+import Why from "./tiles/why";
 
 
 const Explanation = () =>

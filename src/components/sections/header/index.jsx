@@ -7,11 +7,10 @@ import Content from "react-bulma-components/lib/components/content/content";
 import { cn } from "reusable-components/dist/helper";
 
 import Icon from "../../ui/atom/icon";
-
 import Styles from "./index.module.scss";
 
 
-export default () =>
+export default (props) =>
 	<StaticQuery
 		query={ graphql`
 			query {
@@ -32,13 +31,20 @@ export default () =>
 					}
 				}
 			}` }
-		render={ (data) => <Header { ...data } /> }
+		render={ (data) => <Header { ...data } { ...props } /> }
 	/>;
 
 
 class Header extends React.Component {
 	static propTypes = {
-		file: PropTypes.object.isRequired
+		file: PropTypes.object.isRequired,
+		title: PropTypes.string.isRequired,
+		location: PropTypes.string.isRequired
+	};
+
+	static defaultProps = {
+		title: "Go ’n’ Grow!",
+		location: "Potsdam"
 	};
 
 	videoRef = React.createRef();
@@ -92,10 +98,10 @@ class Header extends React.Component {
 
 				<div className={ Styles.intro }>
 					<p className={ Styles.locationContainer }>
-					<span className={ Styles.location }>
-						<Icon className={ Styles.icon } icon={ "location" } />
-						Potsdam
-					</span>
+						<span className={ Styles.location }>
+							<Icon className={ Styles.icon } icon={ "location" } />
+							{ this.props.location }
+						</span>
 					</p>
 
 					<Heading
@@ -106,7 +112,7 @@ class Header extends React.Component {
 						textAlignment={ "centered" }>
 
 						<SpanGenerator
-							string={ "Go ’n’ Grow!" }
+							string={ this.props.title }
 						/>
 
 					</Heading>
@@ -119,9 +125,14 @@ class Header extends React.Component {
 						textColor={ "white" }
 						italic>
 
-						<span>Samen pflanzen. Kiez verschönern.</span> <br/>
-						<span>Hungrige Insekten retten.</span> <br/>
-						<span>Es ist sooo einfach!</span>
+						{ this.props.children ?
+							this.props.children:
+							<>
+								<span>Samen pflanzen. Kiez verschönern.</span> <br/>
+								<span>Hungrige Insekten retten.</span> <br/>
+								<span>Es ist sooo einfach!</span>
+							</>
+						}
 
 					</Content>
 				</div>
