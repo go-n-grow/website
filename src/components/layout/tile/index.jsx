@@ -14,7 +14,8 @@ const Tile = ({
 	graphic,
 	className,
 	hasCustomContent = false,
-	children
+	children,
+	...props
 }) =>
 	<Columns
 		className={ cn(
@@ -22,7 +23,8 @@ const Tile = ({
 			className
 		) }
 		centered
-		marginless>
+		marginless
+		{ ...props }>
 
 		{ hasCustomContent ?
 

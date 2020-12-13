@@ -7,6 +7,7 @@ import Columns from "react-bulma-components/lib/components/columns/columns";
 import Column from "react-bulma-components/lib/components/columns/components/column";
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
+import Section from "../../components/layout/section";
 
 import Header from "../../components/sections/header/index.jsx";
 import Footer from "../../components/layout/footer";
@@ -36,6 +37,15 @@ const App = ({
 
 		<Nav
 			buttonTitle={ "Kontakt" }
+			navItems={ [
+				{
+					"label": "Beet-Kit",
+					"target": "beet-kit"
+				}, {
+					"label": "Kurz erklärt",
+					"target": "kurz-erklaert"
+				},
+			] }
 		/>
 
 		<Header
@@ -47,6 +57,79 @@ const App = ({
 			<span>Es ist sooo einfach!</span>
 
 		</Header>
+
+		<Section>
+
+			<Tile
+				id={ "beet-kit" }
+				hasCustomContent
+				className={ Styles.potKitTile }>
+				<Column size={ 12 }>
+					<Heading
+						textSize={ 5 }
+						textAlignment={ "centered" }
+						className={ Styles.subline }>
+						<span>Jetzt neu, unser</span>
+					</Heading>
+
+					<Heading
+						textSize={ 1 }
+						textAlignment={ "centered" }
+						className={ Styles.heading }>
+						Beet-Kit
+					</Heading>
+
+					<Columns>
+						<Column narrow>
+							<Slideshow/>
+						</Column>
+
+						<Column>
+							<Content>
+								<p>
+									Dir fehlt noch die passende Ausrüstung für dein <strong>Bürger:Beet</strong>? Kein Problem!
+									Wir haben für dich ein extravagantes Werkzeug-Set für deine nächste Pflanzaktion
+									zusammengestellt. Kein Plastik, keine Wegwerfware … langlebig.
+								</p>
+
+								<Heading
+									textColor={ "white" }
+									textSize={ 4 }
+									className={ "has-margin-bottom-sm" }>
+									Was enthält das Beet-Kit?:
+								</Heading>
+
+								<ul>
+									<li>eine geschmiedete Handhacke</li>
+									<li>eine Gartenschere mit wechselbaren Klingen</li>
+									<li>ein Paar Handschuhe (Größe S, M, L oder XL)</li>
+									<li>eine Stahl-Pflanzkelle</li>
+									<li>eine Stahlblech-Gießkanne (9 Liter)</li>
+									<li>2 Tüten (á 6 Sorten) mit seltenen Blumensamen</li>
+									<li>Jute-Sack (110×60 cm) für Gartenabfälle</li>
+								</ul>
+
+								<p>
+									Kling verlockend? Finden wir auch! Wir haben natürlich schon selbst ein Set,
+									sonst hätten wir schon längst zugeschlagen.
+								</p>
+
+								<ButtonGroup position={ "centered" }>
+									<Button
+										colorVariant={ "light" }
+										textColor={ "primary"}
+										onClick={ () => {
+											setOverlayPatchActive({ overlayPatchActive: true })
+										} }>
+										Jetzt anfragen →
+									</Button>
+								</ButtonGroup>
+							</Content>
+						</Column>
+					</Columns>
+				</Column>
+			</Tile>
+		</Section>
 
 		<SimpleSection
 			icon={ "explanation" }
@@ -92,76 +175,6 @@ const App = ({
 					Wir freuen uns riesig über jede eurer Rückmeldungen!
 				</p>
 			</Tile>
-
-			<Tile
-				hasCustomContent
-				className={ Styles.potKitTile }>
-				<Column size={ 12 }>
-					<Heading
-						textSize={ 5 }
-						textAlignment={ "centered" }
-						className={ Styles.subline }>
-						<span>Jetzt neu, unser</span>
-					</Heading>
-
-					<Heading
-						textSize={ 1 }
-						textAlignment={ "centered" }
-						className={ Styles.heading }>
-						Beet-Kit
-					</Heading>
-
-					<Columns>
-						<Column narrow>
-							<Slideshow/>
-						</Column>
-
-						<Column>
-							<Content>
-								<p>
-									Dir fehlt noch die passende Ausrüstung für dein <strong>Bürger:Beet</strong>? Kein Problem!
-									Wir haben für dich ein extravagantes Werkzeug-Set für deine nächste Pflanzaktion
-									zusammengestellt. Kein Plastik, keine Wegwerfware … langlebig.
-								</p>
-
-								<Heading
-									textColor={ "white" }
-									textSize={ 4 }
-									className={ "has-margin-bottom-sm" }>
-									Was enthält das Beet-Kit?:
-								</Heading>
-
-								<ul>
-									<li>eine Geschmiedete Handhacke</li>
-									<li>eine Gartenschere mit wechselbaren Klingen</li>
-									<li>ein Paar Handschuhe (Größe S, M, L oder XL)</li>
-									<li>eine Stahl-Pflanzkelle</li>
-									<li>eine Stahlblech-Gießkanne (9 Liter)</li>
-									<li>2 Tüten (á 6 Sorten) mit seltenen Blumensamen</li>
-									<li>Jute-Sack (110×60 cm) für Gartenabfälle</li>
-								</ul>
-
-								<p>
-									Kling verlockend? Finden wir auch! Wir haben natürlich schon selbst ein Set,
-									sonst hätten wir schon längst zugeschlagen.
-								</p>
-
-								<ButtonGroup position={ "centered" }>
-									<Button
-										colorVariant={ "light" }
-										textColor={ "primary"}
-										onClick={ () => {
-											setOverlayPatchActive({ overlayPatchActive: true })
-										} }>
-										Jetzt anfragen →
-									</Button>
-								</ButtonGroup>
-							</Content>
-						</Column>
-					</Columns>
-				</Column>
-			</Tile>
-
 		</SimpleSection>
 
 		<Footer/>
