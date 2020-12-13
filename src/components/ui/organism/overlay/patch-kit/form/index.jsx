@@ -72,7 +72,7 @@ export default class Form extends Component {
 		});
 
 		const data = await fetch(
-			"/php/send-mail.php",
+			"/php/send-patch-mail.php",
 			{
 				method: "post",
 				headers: {

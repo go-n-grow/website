@@ -116,7 +116,7 @@ const RegisterError = ({onClose}) =>
 			className={ Styles.content }>
 
 			<p>
-				Es ist leider ein Fehler aufgetreten. Bitte senden Sie eine E-Mail an <a href="mailto:bk@go-n-grow.org?subject=Beet-Kit%20Anfrage">bk@go-n-grow.org</a>.
+				Es ist leider ein Fehler aufgetreten. Bitte senden Sie eine E-Mail an <a href="mailto:bk_k@go-n-grow.org?subject=Beet-Kit%20Anfrage">bk_k@go-n-grow.org</a>.
 			</p>
 
 		</Content>
