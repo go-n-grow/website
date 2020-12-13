@@ -8,6 +8,7 @@
 	require './phpmailer-6.1.7/src/SMTP.php';
 
 	require './config.php';
+	$MAIL_ADDRESS = "bk_k@go-n-grow.org";
 
 	$mail = new PHPMailer(true);
 
@@ -24,7 +25,7 @@
 		$name = $data["name"];
 		$address = $data["address"];
 		$userEmail = $data["mail"];
-		$userSubject = "Anmeldung von " . $name;
+		$userSubject = "Beet-Kit Anfrage von " . $name;
 
 		$mailBody =
 			"<p>Name: " . $name . "</p>" .
