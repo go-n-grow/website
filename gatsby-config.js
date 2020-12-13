@@ -45,6 +45,8 @@ module.exports = {
 				extensions: ["css", "html", "js", "svg"],
 			},
 		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 		{
 			resolve: "gatsby-source-graphql",
 			options: {
@@ -59,8 +61,6 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-video`,
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

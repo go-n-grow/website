@@ -7521,7 +7521,7 @@ gatsby-plugin-sass@^2.3.12:
     "@babel/runtime" "^7.12.5"
     sass-loader "^7.3.1"
 
-gatsby-plugin-sharp@^2.6.36:
+gatsby-plugin-sharp@^2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.10.1.tgz#409958a2a4421b6f15b782be057ed54d019008a1"
   integrity sha512-w1a4waIlAUb7SpfvMstVI8S2V/R5EECqSEQ3IUFtARqbp/9eGFMlgwBBmn4AEA8bsIp3Bwvl1T2lIqZoh+jgHA==
@@ -7729,7 +7729,7 @@ gatsby-transformer-remark@^2.8.35:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby-transformer-sharp@^2.5.15:
+gatsby-transformer-sharp@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.8.0.tgz#531412b6b4e27d0ad5abc58cc6ee54f927f59f0f"
   integrity sha512-pxNKLKoUf6jP6NidZzuyp92wFHIJCddgmO9gmHUjfdOiNybJddY8fEx415YJov9JCk+wbaZQ/fQTq+aZ28vtkQ==
@@ -14353,7 +14353,7 @@ retry@0.12.0, retry@^0.12.0:
 
 reusable-components@Coderwelsch/reusable-components:
   version "1.0.1"
-  resolved "https://codeload.github.com/Coderwelsch/reusable-components/tar.gz/07244965cb7f3f7436dcc91a235ccf2da5176320"
+  resolved "https://codeload.github.com/Coderwelsch/reusable-components/tar.gz/3508cd6d627388fcfbc1430aed222062ef00f69a"
   dependencies:
     "@babel/cli" "^7.11.6"
     "@babel/core" "^7.11.6"

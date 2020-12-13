@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import "react-awesome-slider/dist/styles.css";
 
+import Button from "react-bulma-components/lib/components/button/button";
+import ButtonGroup from "react-bulma-components/lib/components/button/components/button-group";
+import Columns from "react-bulma-components/lib/components/columns/columns";
 import Column from "react-bulma-components/lib/components/columns/components/column";
 import Heading from "react-bulma-components/lib/components/heading/heading";
+import Content from "react-bulma-components/lib/components/content/content";
 
 import Header from "../../components/sections/header/index.jsx";
 import Footer from "../../components/layout/footer";
@@ -11,10 +14,20 @@ import Page from "../../components/layout/page";
 import SimpleSection from "../../components/layout/section/simple";
 import Tile from "../../components/layout/tile";
 import Nav from "../../components/ui/organism/nav";
+import PatchKitOverlay from "../../components/ui/organism/overlay/patch-kit";
 import RegisterOverlay from "../../components/ui/organism/overlay/register";
 
+import Styles from "./koeln.module.scss";
+import Slideshow from "./slideshow";
 
-const App = ({ overlayActive, setOverlayActive }) =>
+
+const App = ({
+	overlayActive,
+	setOverlayActive,
+
+	overlayPatchActive,
+	setOverlayPatchActive
+}) =>
 	<Page
 		subTitle={ "Willkommen" }
 		title={ "Bürger:Beete" }
@@ -80,19 +93,85 @@ const App = ({ overlayActive, setOverlayActive }) =>
 				</p>
 			</Tile>
 
-			<Tile hasCustomContent>
+			<Tile
+				hasCustomContent
+				className={ Styles.potKitTile }>
 				<Column size={ 12 }>
-					<Heading textAlignment={ "centered" }>
-						Unser Growkit
+					<Heading
+						textSize={ 5 }
+						textAlignment={ "centered" }
+						className={ Styles.subline }>
+						<span>Jetzt neu, unser</span>
 					</Heading>
 
+					<Heading
+						textSize={ 1 }
+						textAlignment={ "centered" }
+						className={ Styles.heading }>
+						Beet-Kit
+					</Heading>
 
+					<Columns>
+						<Column narrow>
+							<Slideshow/>
+						</Column>
+
+						<Column>
+							<Content>
+								<p>
+									Dir fehlt noch die passende Ausrüstung für dein <strong>Bürger:Beet</strong>? Kein Problem!
+									Wir haben für dich ein extravagantes Werkzeug-Set für deine nächste Pflanzaktion
+									zusammengestellt. Kein Plastik, keine Wegwerfware … langlebig.
+								</p>
+
+								<Heading
+									textColor={ "white" }
+									textSize={ 4 }
+									className={ "has-margin-bottom-sm" }>
+									Was enthält das Beet-Kit?:
+								</Heading>
+
+								<ul>
+									<li>eine Geschmiedete Handhacke</li>
+									<li>eine Gartenschere mit wechselbaren Klingen</li>
+									<li>ein Paar Handschuhe (Größe S, M, L oder XL)</li>
+									<li>eine Stahl-Pflanzkelle</li>
+									<li>eine Stahlblech-Gießkanne (9 Liter)</li>
+									<li>2 Tüten (á 6 Sorten) mit seltenen Blumensamen</li>
+									<li>Jute-Sack (110×60 cm) für Gartenabfälle</li>
+								</ul>
+
+								<p>
+									Kling verlockend? Finden wir auch! Wir haben natürlich schon selbst ein Set,
+									sonst hätten wir schon längst zugeschlagen.
+								</p>
+
+								<ButtonGroup position={ "centered" }>
+									<Button
+										colorVariant={ "light" }
+										textColor={ "primary"}
+										onClick={ () => {
+											setOverlayPatchActive({ overlayPatchActive: true })
+										} }>
+										Jetzt anfragen →
+									</Button>
+								</ButtonGroup>
+							</Content>
+						</Column>
+					</Columns>
 				</Column>
 			</Tile>
 
 		</SimpleSection>
 
 		<Footer/>
+
+		<PatchKitOverlay
+			isActive={ overlayPatchActive }
+			onClose={ () => setOverlayPatchActive({
+				overlayPatchActive: false,
+			}) }
+		/>
 
 		<RegisterOverlay
 			isActive={ overlayActive }
@@ -102,12 +181,19 @@ const App = ({ overlayActive, setOverlayActive }) =>
 		/>
 	</Page>;
 
-const mapStateToProps = ({ overlayActive }) => {
-	return { overlayActive };
-};
+const mapStateToProps = ({ overlayActive, overlayPatchActive }) => {
+	return {
+		overlayActive,
+		overlayPatchActive
+	}
+}
 
 const mapDispatchToProps = dispatch => {
-	return { setOverlayActive: () => dispatch({ type: `SET_OVERLAY_ACTIVE` }) };
-};
+	return {
+		setOverlayPatchActive: data => dispatch({ type: `SET_PATCH_OVERLAY_ACTIVE`, ...data }),
+		setOverlayActive: data => dispatch({ type: `SET_OVERLAY_ACTIVE`, ...data }),
+	}
+}
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

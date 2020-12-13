@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Header from "../components/home/header/index.jsx";
-import Explanation from "../components/home/explanation/index.jsx";
-import Map from "../components/home/map/index.jsx";
-import RegisterInterferer from "../components/home/register-interferer";
+import Header from "../components/sections/header/index.jsx";
+import Explanation from "../components/sections/explanation/index.jsx";
+import Map from "../components/sections/map/index.jsx";
+import RegisterInterferer from "../components/sections/register-interferer";
 import Footer from "../components/layout/footer";
 import Page from "../components/layout/page";
 import Nav from "../components/ui/organism/nav";

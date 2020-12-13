@@ -3,14 +3,24 @@ import Columns from "react-bulma-components/lib/components/columns/columns";
 import Column from "react-bulma-components/lib/components/columns/components/column";
 import Content from "react-bulma-components/lib/components/content/content";
 import Heading from "react-bulma-components/lib/components/heading/heading";
+import { cn } from "reusable-components/dist/helper";
 
 import Asset from "../../ui/atom/asset";
 import Styles from "./index.module.scss";
 
 
-const Tile = ({ title, graphic, hasCustomContent = false, children }) =>
+const Tile = ({
+	title,
+	graphic,
+	className,
+	hasCustomContent = false,
+	children
+}) =>
 	<Columns
-		className={ Styles.tile }
+		className={ cn(
+			Styles.tile,
+			className
+		) }
 		centered
 		marginless>
 

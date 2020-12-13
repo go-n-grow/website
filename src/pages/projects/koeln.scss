@@ -1,0 +1,24 @@
+.awssld {
+	--organic-arrow-thickness: 0.25rem;
+	--organic-arrow-border-radius: 30px;
+	--organic-arrow-height: 40px;
+	--organic-arrow-color: #ffffff !important;
+
+	--control-button-width: 4rem;
+	--control-button-opacity: 1;
+	--control-button-hover-opacity: 0.75;
+	--control-bullet-color: #2d5182;
+	--control-bullet-active-color: #26456f;
+
+	overflow: hidden;
+
+	border: 0.2rem solid white;
+	border-radius: 0.5rem;
+}
+
+.awssld__content {
+	overflow: hidden;
+	border-radius: 0.24rem;
+
+	background: transparent;
+}
