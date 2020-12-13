@@ -71,6 +71,9 @@ class Header extends React.Component {
 
 	render () {
 		const { file } = this.props;
+		const fileKeys = Object.keys(file);
+
+		console.log(fileKeys);
 
 		return (
 			<div className={ cn(
@@ -82,12 +85,13 @@ class Header extends React.Component {
 					onPlay={ this.onPlayVideo.bind(this) }
 					onLoad={ this.onPlayVideo.bind(this) }
 					className={ Styles.video }
+					src={ file["videoH264"]?.path }
 					autoPlay
 					loop
 					playsInline
 					muted>
 
-					{ Object.keys(file).map(key =>
+					{ fileKeys.map(key =>
 						<Source
 							key={ key }
 							{ ...file[key] }
@@ -107,7 +111,6 @@ class Header extends React.Component {
 					<Heading
 						className={ Styles.heading }
 						textColor={ "white" }
-						textSize={ 1 }
 						renderAs={ "h1" }
 						textAlignment={ "centered" }>
 
@@ -119,7 +122,6 @@ class Header extends React.Component {
 
 					<Content
 						renderAs={ "h2" }
-						textSize={ 3 }
 						className={ Styles.description }
 						textAlignment={ "centered" }
 						textColor={ "white" }

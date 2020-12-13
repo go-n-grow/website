@@ -43,7 +43,18 @@
 		top: 40%;
 		left: 50%;
 
+		pointer-events: none;
+
 		transform: translate(-50%, -50%);
+
+		@include until($tablet) {
+			left: 0;
+			top: 30%;
+
+			width: 100%;
+
+			transform: translateY(-10%);
+		}
 
 		.locationContainer {
 			display: flex;
@@ -97,12 +108,16 @@
 		.heading {
 			margin-bottom: 1rem;
 
-			font-size: 5rem !important;
 			font-weight: 900;
+			font-size: 3.4rem;
 
 			text-shadow:
 				0 1px 2px rgba(0, 0, 0, 0.37),
 				0 0.25rem 2.5rem rgba(0, 0, 0, 0.1);
+
+			@include from($tablet) {
+				font-size: 5rem;
+			}
 
 			span {
 				display: inline-block;
@@ -132,6 +147,7 @@
 		.description {
 			line-height: 1.36;
 			font-weight: 500;
+			font-size: $size-5;
 			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
 
 			opacity: 0;
@@ -141,6 +157,14 @@
 			animation-duration: 750ms;
 			animation-timing-function: ease-out;
 			animation-delay: $baseDelay + ($letterDelay * $lettersCount) + 1000ms;
+
+			@include from(400px) {
+				font-size: $size-4;
+			}
+
+			@include from($tablet) {
+				font-size: $size-3;
+			}
 
 			@keyframes desc-fade-in {
 				to {

@@ -4,7 +4,32 @@
 .rootContainer {
 	background: rgba(0, 0, 0, 0.6);
 
+	@include until($tablet) {
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			width: 3rem;
+			height: 100%;
+
+			content: "";
+			display: block;
+
+			background: linear-gradient(
+				to right,
+				transparent 0%,
+				rgba(0, 0, 0, 0.3) 100%
+			);
+		}
+	}
+
 	.container {
+		@include until($tablet) {
+			overflow-scrolling: touch;;
+			overflow: scroll;
+		}
+
 		.navItems {
 			background: transparent;
 
@@ -27,6 +52,10 @@
 
 					color: white !important;
 
+					@include until($tablet) {
+						padding: 1rem 1rem !important;
+					}
+
 					&:hover {
 						background: black;
 					}
@@ -39,12 +68,20 @@
 .logo {
 	margin-left: 1rem;
 	font-size: 1.75rem;
+
+	@include until($tablet) {
+		display: none;
+	}
 }
 
 .ctaBtn {
 	padding: 0.25rem 0.9rem;
 
 	text-transform: uppercase;
+
+	@include until($tablet) {
+		margin-right: 1rem;
+	}
 
 	&:after {
 		border-left-color: $primary;

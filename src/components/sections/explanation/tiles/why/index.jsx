@@ -15,7 +15,7 @@ const Why = () =>
 		</p>
 
 		<p className={ "is-italic" }>
-			Wir lassen Potsdam neu erblühen. Aus grau wird bunt! Es gibt nur&nbsp;Vorteile.
+			Wir lassen unsere Stadt neu erblühen. Aus grau wird bunt! Es gibt nur&nbsp;Vorteile.
 		</p>
 
 	</Tile>;

@@ -85,7 +85,7 @@ const App = ({
 						</Column>
 
 						<Column>
-							<Content>
+							<Content size={ "medium" }>
 								<p>
 									Dir fehlt noch die passende Ausrüstung für dein <strong>Bürger:Beet</strong>? Kein Problem!
 									Wir haben für dich ein extravagantes Werkzeug-Set für deine nächste Pflanzaktion

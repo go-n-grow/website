@@ -58,8 +58,10 @@ const Slideshow = () => {
 	return (
 		<AutoplaySlider
 			play={ true }
-			cancelOnInteraction={ false }
 			interval={ 5000 }
+			infinite={ true }
+			mobileTouch={ true }
+			buttons={ true }
 			className={ Styles.slideshow }>
 			{ result.allFile.edges.map(({ node }) =>
 				<div

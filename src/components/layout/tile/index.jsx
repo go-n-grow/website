@@ -23,7 +23,6 @@ const Tile = ({
 			className
 		) }
 		centered
-		marginless
 		{ ...props }>
 
 		{ hasCustomContent ?
@@ -31,7 +30,14 @@ const Tile = ({
 			children:
 
 			<>
-				<Column narrow>
+				<Column
+					mobile={ {
+						size: 12
+					} }
+					desktop={ {
+						narrow: true,
+						size: null
+					} }>
 					<Asset
 						className={ Styles.icon }
 						graphic={ graphic }
@@ -40,13 +46,18 @@ const Tile = ({
 
 				<Column
 					className={ Styles.content }
-					size={ 8 }>
+					mobile={ {
+						size: 12
+					} }
+					desktop={ {
+						size: 8
+					} }>
 
 					<Heading
 						dangerouslySetInnerHTML={ { __html: title } }
 					/>
 
-					<Content>
+					<Content className={ Styles.children }>
 						{ children }
 					</Content>
 

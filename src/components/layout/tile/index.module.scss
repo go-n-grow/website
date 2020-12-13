@@ -7,12 +7,17 @@
 	align-items: flex-start; // top and bottom
 
 	padding: 3rem;
-	margin-top: 3rem !important;
+	margin: 0;
+	margin-top: 3rem;
 	margin-bottom: 3rem !important;
 
 	border-radius: $border-radius-default;
 
 	background: rgba(0, 0, 0, 0.1);
+
+	@include until($tablet) {
+		padding: 1rem;
+	}
 
 	.icon {
 		width: 100%;
@@ -20,7 +25,17 @@
 	}
 
 	.content {
-		padding-right: 3rem;
-		padding-left: 3rem;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+
+
+		@include from($tablet) {
+			padding-right: 3rem;
+			padding-left: 3rem;
+		}
+	}
+
+	.children {
+		font-size: $size-medium;
 	}
 }
