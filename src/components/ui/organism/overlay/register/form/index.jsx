@@ -168,7 +168,7 @@ export default class Form extends Component {
 						id={ "address" }
 						label={ "Adresse:" }
 						value={ this.state.form.address }
-						placeholder={ "Brandenburger Str. 123, 14473 Potsdam" }
+						placeholder={ "Brandenburger Str. 123, 12345 Stadt XY" }
 						onChange={ this.onChange.bind(this) }
 					/>
 

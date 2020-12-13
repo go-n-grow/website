@@ -7,19 +7,19 @@ import Columns from "react-bulma-components/lib/components/columns/columns";
 import Column from "react-bulma-components/lib/components/columns/components/column";
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
-import Section from "../../components/layout/section";
+import Section from "../components/layout/section";
 
-import Header from "../../components/sections/header/index.jsx";
-import Footer from "../../components/layout/footer";
-import Page from "../../components/layout/page";
-import SimpleSection from "../../components/layout/section/simple";
-import Tile from "../../components/layout/tile";
-import Nav from "../../components/ui/organism/nav";
-import PatchKitOverlay from "../../components/ui/organism/overlay/patch-kit";
-import RegisterOverlay from "../../components/ui/organism/overlay/register";
+import Header from "../components/sections/header";
+import Footer from "../components/layout/footer";
+import Page from "../components/layout/page";
+import SimpleSection from "../components/layout/section/simple";
+import Tile from "../components/layout/tile";
+import Nav from "../components/ui/organism/nav";
+import PatchKitOverlay from "../components/ui/organism/overlay/patch-kit";
+import RegisterOverlay from "../components/ui/organism/overlay/register";
 
-import Styles from "./koeln.module.scss";
-import Slideshow from "./slideshow";
+import Styles from "./projects/koeln.module.scss";
+import Slideshow from "./projects/slideshow";
 
 
 const App = ({
