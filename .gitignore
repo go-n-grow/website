@@ -1,7 +1,7 @@
 # stuff
 static/php/config.php
 src/assets/fonts/icon/*.html
-src/assets/images
+!src/assets/images
 .tsgrc
 .graphqlconfig
 tsg-project.graphql
