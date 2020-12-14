@@ -7,13 +7,17 @@ const isMatomoAvailable = () => {
 	);
 };
 
-const track = () => {
-	window._paq.push();
+const track = (eventName, value) => {
+	window._paq.push([
+		"trackEvent",
+		eventName,
+		value
+	]);
 };
 
 const trackEvent = (eventName, value) => {
 	if (isMatomoAvailable()) {
-		track();
+		track(eventName, value);
 		console.log(`Tracked event: ${ eventName }: "${ value }"`);
 	} else {
 		console.warn(`Couldn’t track event: ${ eventName }: "${ value }"`);

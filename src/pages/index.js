@@ -25,7 +25,8 @@ const App = ({ overlayActive, setOverlayActive }) =>
 		<RegisterOverlay
 			isActive={ overlayActive }
 			onClose={ () => setOverlayActive({
-				overlayActive: false
+				overlayActive: false,
+				OverlayComponent: null
 			}) }
 		/>
 	</Page>;

@@ -16,18 +16,16 @@ import SimpleSection from "../components/layout/section/simple";
 import Tile from "../components/layout/tile";
 import Nav from "../components/ui/organism/nav";
 import PatchKitOverlay from "../components/ui/organism/overlay/patch-kit";
-import RegisterOverlay from "../components/ui/organism/overlay/register";
+import trackEvent from "../tracking";
 
 import Styles from "./projects/koeln.module.scss";
 import Slideshow from "./projects/slideshow";
 
 
 const App = ({
+	OverlayComponent,
 	overlayActive,
-	setOverlayActive,
-
-	overlayPatchActive,
-	setOverlayPatchActive
+	setOverlayActive
 }) =>
 	<Page
 		subTitle={ "Willkommen" }
@@ -119,7 +117,12 @@ const App = ({
 										colorVariant={ "light" }
 										textColor={ "primary"}
 										onClick={ () => {
-											setOverlayPatchActive({ overlayPatchActive: true })
+											trackEvent("Beet-Kit Overlay", "open");
+
+											setOverlayActive({
+												overlayActive: true,
+												OverlayComponent: PatchKitOverlay
+											})
 										} }>
 										Jetzt anfragen →
 									</Button>
@@ -179,31 +182,27 @@ const App = ({
 
 		<Footer/>
 
-		<PatchKitOverlay
-			isActive={ overlayPatchActive }
-			onClose={ () => setOverlayPatchActive({
-				overlayPatchActive: false,
-			}) }
-		/>
+		{ OverlayComponent &&
+			<OverlayComponent
+				isActive={ overlayActive }
+				onClose={ () => setOverlayActive({
+					overlayActive: false,
+					OverlayComponent: null
+				}) }
+			/>
+		}
 
-		<RegisterOverlay
-			isActive={ overlayActive }
-			onClose={ () => setOverlayActive({
-				overlayActive: false,
-			}) }
-		/>
 	</Page>;
 
-const mapStateToProps = ({ overlayActive, overlayPatchActive }) => {
+const mapStateToProps = ({ overlayActive, OverlayComponent }) => {
 	return {
 		overlayActive,
-		overlayPatchActive
+		OverlayComponent
 	}
 }
 
 const mapDispatchToProps = dispatch => {
 	return {
-		setOverlayPatchActive: data => dispatch({ type: `SET_PATCH_OVERLAY_ACTIVE`, ...data }),
 		setOverlayActive: data => dispatch({ type: `SET_OVERLAY_ACTIVE`, ...data }),
 	}
 }

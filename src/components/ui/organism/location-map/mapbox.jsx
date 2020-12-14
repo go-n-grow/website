@@ -97,7 +97,7 @@ export default class Mapbox extends Component {
 	}
 	
 	onMove () {
-		console.log("MOVE", Mapbox.MapInstance.getCenter(), Mapbox.MapInstance.getZoom());
+		// console.log("MOVE", Mapbox.MapInstance.getCenter(), Mapbox.MapInstance.getZoom());
 	}
 
 	onMapReady () {

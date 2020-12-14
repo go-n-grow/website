@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { cn } from "reusable-components/dist/helper";
 import Overlay from "reusable-components/dist/ui/overlay";
 import Heading from "react-bulma-components/lib/components/heading/heading";
 import Content from "react-bulma-components/lib/components/content/content";
+import trackEvent from "../../../../../tracking";
 
 import Form from "./form/index.jsx";
 import Asset from "../../../atom/asset";
@@ -13,6 +15,7 @@ const RegisterOverlay = props => {
 	const [sendStatus, setStatus] = useState(null);
 
 	const onClose = () => {
+		trackEvent("Register Overlay", "close");
 		props.onClose();
 		setTimeout(() => setStatus(null), 250);
 	};
@@ -27,11 +30,12 @@ const RegisterOverlay = props => {
 					sendStatus === "done" && Styles.onDone,
 				),
 			} }
-			{ ...props }>
+			{ ...props }
+			onClose={ onClose }>
 
 			{ sendStatus === null &&
 				<RegisterForm
-					onClose={ props.onClose }
+					onClose={ onClose }
 					onDone={ () => setStatus("done") }
 					onError={ () => setStatus("error") }
 				/>
@@ -42,6 +46,11 @@ const RegisterOverlay = props => {
 
 		</Overlay>
 	);
+};
+
+RegisterOverlay.propTypes = {
+	onClose: PropTypes.func.isRequired,
+	isActive: PropTypes.bool
 };
 
 const RegisterForm = ({ onDone, onError, onClose }) =>

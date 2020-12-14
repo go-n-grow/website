@@ -73,8 +73,6 @@ class Header extends React.Component {
 		const { file } = this.props;
 		const fileKeys = Object.keys(file);
 
-		console.log(fileKeys);
-
 		return (
 			<div className={ cn(
 				Styles.header,

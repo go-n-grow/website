@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 
 import { Default as DefaultButton } from "reusable-components/dist/ui/buttons";
 import NavComp from "reusable-components/dist/ui/nav";
+import trackEvent from "../../../../tracking";
 
 import Icon from "../../atom/icon";
+import RegisterOverlay from "../overlay/register";
 import NavItems from "./nav-items.json";
 import Styles from "./index.module.scss";
 
@@ -47,14 +49,23 @@ class Nav extends Component {
 						className: Styles.navItems,
 					} }
 					CTAButtonComp={ () =>
+
 						<DefaultButton
 							className={ Styles.ctaBtn }
 							color={ "primary" }
-							onClick={ () => setOverlayActive({
-								overlayActive: true,
-							}) }>
+							onClick={ () => {
+								trackEvent("Register Overlay", "open");
+
+								setOverlayActive({
+									overlayActive: true,
+									OverlayComponent: RegisterOverlay
+								})
+							} }>
+
 							{ this.props.buttonTitle }
+
 						</DefaultButton>
+
 					}
 				/>
 			</>
