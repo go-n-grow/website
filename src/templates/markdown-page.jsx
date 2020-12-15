@@ -26,14 +26,16 @@ export default class MarkdownPage extends Component {
 					<Container>
 						<Columns centered>
 							<Column className={ `is-two-thirds-desktop` }>
-								<Link to={ "/" }>
+								<div onClick={ () => window.history.back()  }>
+
 									<Button
 										size={ "medium" }
 										color={ "primary" }
 										className={ "has-margin-top-md has-margin-bottom-md" }>
-										← Zurück zur Startseite
+										← Zurück
 									</Button>
-								</Link>
+
+								</div>
 
 								<Content
 									size={ "medium" }
