@@ -144,8 +144,7 @@ const App = ({
 				graphic={ "hi" }>
 
 				<p>
-					… die Initiative <strong><i>»&#8202;Go&nbsp;’n’&nbsp;Grow&#8202;«</i></strong> der <i>Universität zu
-					Köln.</i>
+					… die Initiative <strong><i>»&#8202;Go&nbsp;’n’&nbsp;Grow&#8202;«</i></strong>.
 					Wir wollen mit eurer Hilfe unsere Veedel grüner und
 					insektenfreundlicher gestalten. Zusammen bringen wir Köln zum blühen!
 					Und das machen wir&nbsp;so:

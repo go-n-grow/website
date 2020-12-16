@@ -138,8 +138,8 @@ export default class Form extends Component {
 						<p>
 							Wir, das <strong><i>»Go ’n’ Grow«</i></strong>-Team, freuen uns, dass Sie an unserem Projekt
 							teilhaben wollen! Die Anmeldung ist super simpel, nicht bindend und dauert maximal eine Minute.
-							Weitere Informationen bekommen Sie nach der Anmeldung von uns via E-Mail zugesandt. <strong>Zusammen
-							bringen wir Potsdam zum blühen!</strong>
+							Weitere Informationen bekommen Sie nach der Anmeldung von uns via E-Mail zugesandt.
+							<strong>Zusammen bringen wir unsere Stadt zum blühen!</strong>
 						</p>
 
 						<hr/>
