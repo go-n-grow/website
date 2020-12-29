@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 import { Default as DefaultButton } from "reusable-components/dist/ui/buttons";
 import NavComp from "reusable-components/dist/ui/nav";
-import trackEvent from "../../../../tracking";
 
+import trackEvent from "../../../../tracking";
 import Icon from "../../atom/icon";
 import RegisterOverlay from "../overlay/register";
 import NavItems from "./nav-items.json";
@@ -74,7 +74,7 @@ class Nav extends Component {
 }
 
 const Logo = () =>
-	<a href="/">
+	<a>
 		<Icon
 			icon={ "logo" }
 			className={ Styles.logo }
